@@ -1,0 +1,447 @@
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: relative !important;
+
+  width: 100% !important;
+  min-height: 70px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+
+  direction: ltr !important;
+
+  background: transparent !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  z-index: 1000 !important;
+}
+
+
+/* =========================================================
+   BRAND - LEFT
+========================================================= */
+
+.navbar-brand {
+  position: relative !important;
+
+  order: 1 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  flex-shrink: 0 !important;
+
+  direction: rtl !important;
+
+  z-index: 1001 !important;
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.navbar-logo {
+  display: block !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #392b40 !important;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size: 25px !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1.5 !important;
+
+  letter-spacing: -0.4px !important;
+
+  text-decoration: none !important;
+
+  white-space: nowrap !important;
+
+  direction: rtl !important;
+
+  text-shadow:
+    0 1px 1px rgba(255, 255, 255, 0.7) !important;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+
+/* =========================================================
+   BRAND HOVER
+========================================================= */
+
+.navbar-logo:hover {
+  color: #765584 !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.navbar-music-button {
+  width: 42px !important;
+  height: 42px !important;
+
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  border: 1px solid rgba(118, 85, 132, 0.22) !important;
+
+  border-radius: 50% !important;
+
+  background: rgba(255, 255, 255, 0.72) !important;
+
+  color: #765584 !important;
+
+  font-size: 21px !important;
+
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+
+  flex-shrink: 0 !important;
+
+  direction: ltr !important;
+
+  box-shadow:
+    0 4px 14px rgba(80, 55, 90, 0.08) !important;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+
+/* =========================================================
+   MUSIC ICON
+========================================================= */
+
+.navbar-music-button span {
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  line-height: 1 !important;
+}
+
+
+/* =========================================================
+   MUSIC BUTTON HOVER
+========================================================= */
+
+.navbar-music-button:hover {
+  background: rgba(255, 255, 255, 0.92) !important;
+
+  transform: translateY(-2px) !important;
+
+  box-shadow:
+    0 6px 18px rgba(80, 55, 90, 0.13) !important;
+}
+
+
+/* =========================================================
+   MUSIC PLAYING
+========================================================= */
+
+.navbar-music-button.playing {
+  color: #684d7d !important;
+
+  border-color: rgba(104, 77, 125, 0.35) !important;
+
+  background: rgba(255, 255, 255, 0.88) !important;
+}
+
+
+/* =========================================================
+   MENU - RIGHT
+========================================================= */
+
+.navbar-menu {
+  position: relative !important;
+
+  order: 2 !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: flex-end !important;
+
+  gap: 32px !important;
+
+  list-style: none !important;
+
+  direction: rtl !important;
+
+  flex-wrap: nowrap !important;
+
+  z-index: 1001 !important;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+========================================================= */
+
+.navbar-menu li {
+  position: relative !important;
+
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  list-style: none !important;
+}
+
+
+/* =========================================================
+   MENU LINKS
+========================================================= */
+
+.navbar-menu li a {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 8px 0 !important;
+
+  color: #3f3345 !important;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size: 16px !important;
+
+  font-weight: 500 !important;
+
+  line-height: 1.7 !important;
+
+  letter-spacing: -0.15px !important;
+
+  text-decoration: none !important;
+
+  white-space: nowrap !important;
+
+  direction: rtl !important;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+
+/* =========================================================
+   MENU HOVER
+========================================================= */
+
+.navbar-menu li a:hover {
+  color: #765584 !important;
+
+  transform: translateY(-1px) !important;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+========================================================= */
+
+.top-navigation {
+  position: relative !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: flex-start !important;
+
+  justify-content: space-between !important;
+
+  direction: ltr !important;
+}
+
+
+/* =========================================================
+   NAVBAR INSIDE TOP NAVIGATION
+========================================================= */
+
+.top-navigation > .navbar {
+  position: relative !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: flex-start !important;
+
+  justify-content: space-between !important;
+
+  direction: ltr !important;
+}
+
+
+/* =========================================================
+   MOBILE - 850px
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    min-height: 60px !important;
+  }
+
+  .navbar-logo {
+    font-size: 20px !important;
+  }
+
+  .navbar-menu {
+    gap: 18px !important;
+  }
+
+  .navbar-menu li a {
+    font-size: 14px !important;
+  }
+
+  .navbar-music-button {
+    width: 38px !important;
+    height: 38px !important;
+
+    margin-top: 6px !important;
+
+    font-size: 19px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    align-items: flex-start !important;
+  }
+
+  .navbar-logo {
+    font-size: 18px !important;
+  }
+
+  .navbar-menu {
+    gap: 12px !important;
+
+    max-width: 70% !important;
+
+    overflow-x: auto !important;
+
+    scrollbar-width: none !important;
+  }
+
+  .navbar-menu::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .navbar-menu li a {
+    font-size: 12px !important;
+
+    padding: 6px 0 !important;
+  }
+
+  .navbar-music-button {
+    width: 34px !important;
+    height: 34px !important;
+
+    font-size: 17px !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE - 450px
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .navbar-menu {
+    gap: 9px !important;
+  }
+
+  .navbar-menu li a {
+    font-size: 11px !important;
+  }
+
+  .navbar-logo {
+    font-size: 16px !important;
+  }
+}
+

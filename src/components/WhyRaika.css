@@ -1,0 +1,546 @@
+/* =========================================================
+   WHY RAIKA SECTION
+========================================================= */
+
+.why-raika-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url("../assets/MY LADY -1.jpg");
+
+  /* کمی بزرگ‌تر شدن تصویر */
+  background-size: 110%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  direction: rtl;
+
+  font-family:
+    "Calibri",
+    "Segoe UI",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+========================================================= */
+
+.why-raika-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(244, 239, 249, 0.48);
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.why-raika-container {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 95px 30px 80px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.why-raika-heading {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.why-raika-small-title {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 21px;
+
+  line-height: 1.6;
+
+  font-weight: 700;
+
+  color: #79509c;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.why-raika-heading h1 {
+  margin: 0;
+
+  font-size: 42px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  color: #3d3049;
+}
+
+
+.why-raika-heading h1 span {
+  color: #8757ae;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.why-raika-line {
+  width: 75px;
+  height: 4px;
+
+  margin: 22px auto 24px;
+
+  background: #9a6abd;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   INTRO TEXT
+========================================================= */
+
+.why-raika-intro {
+  max-width: 750px;
+
+  margin: 0 auto 14px;
+
+  font-size: 20px;
+
+  line-height: 1.9;
+
+  font-weight: 700;
+
+  color: #594265;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.why-raika-description {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  font-size: 17px;
+
+  line-height: 2;
+
+  font-weight: 400;
+
+  color: #5b5062;
+}
+
+
+/* =========================================================
+   FEATURES GRID
+========================================================= */
+
+.why-raika-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   FEATURE
+   بدون کادر
+========================================================= */
+
+.why-raika-card {
+  min-height: 280px;
+
+  padding: 30px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  text-align: center;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =========================================================
+   FEATURE HOVER
+========================================================= */
+
+.why-raika-card:hover {
+  transform: translateY(-7px);
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   ICON
+   بدون دایره
+========================================================= */
+
+.why-raika-icon {
+  width: auto;
+  height: auto;
+
+  margin-bottom: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 0;
+
+  color: #8f648f;
+
+  font-size: 34px;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   ICON SVG
+========================================================= */
+
+.why-raika-icon svg {
+  width: 34px;
+  height: 34px;
+
+  display: block;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.why-raika-card:hover .why-raika-icon {
+  transform: scale(1.12);
+
+  background: transparent;
+
+  color: #795278;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.why-raika-card-content {
+  width: 100%;
+}
+
+
+/* =========================================================
+   FEATURE TITLE
+========================================================= */
+
+.why-raika-card-content h2 {
+  margin: 0 0 13px;
+
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  font-weight: 700;
+
+  color: #49355a;
+}
+
+
+/* =========================================================
+   FEATURE TEXT
+========================================================= */
+
+.why-raika-card-content p {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 2;
+
+  font-weight: 400;
+
+  color: #5a5060;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .why-raika-section {
+    background-size: cover;
+  }
+
+
+  .why-raika-container {
+    padding: 80px 25px 70px;
+  }
+
+
+  .why-raika-heading {
+    margin-bottom: 50px;
+  }
+
+
+  .why-raika-heading h1 {
+    font-size: 36px;
+  }
+
+
+  .why-raika-intro {
+    font-size: 18px;
+  }
+
+
+  .why-raika-description {
+    font-size: 16px;
+  }
+
+
+  .why-raika-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+
+  .why-raika-card {
+    min-height: 270px;
+
+    padding: 30px 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .why-raika-section {
+    min-height: auto;
+
+    background-size: cover;
+
+    background-position: center center;
+  }
+
+
+  .why-raika-container {
+    padding: 65px 20px 55px;
+  }
+
+
+  .why-raika-heading {
+    margin-bottom: 40px;
+  }
+
+
+  .why-raika-small-title {
+    margin-bottom: 8px;
+
+    font-size: 19px;
+  }
+
+
+  .why-raika-heading h1 {
+    font-size: 30px;
+
+    line-height: 1.6;
+  }
+
+
+  .why-raika-line {
+    width: 60px;
+    height: 3px;
+
+    margin: 18px auto 20px;
+  }
+
+
+  .why-raika-intro {
+    font-size: 17px;
+
+    line-height: 1.9;
+  }
+
+
+  .why-raika-description {
+    font-size: 15px;
+
+    line-height: 1.95;
+  }
+
+
+  .why-raika-grid {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+  }
+
+
+  .why-raika-card {
+    min-height: auto;
+
+    padding: 25px 15px 35px;
+  }
+
+
+  .why-raika-icon {
+    margin-bottom: 18px;
+
+    font-size: 30px;
+  }
+
+
+  .why-raika-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .why-raika-card-content h2 {
+    margin-bottom: 10px;
+
+    font-size: 21px;
+  }
+
+
+  .why-raika-card-content p {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .why-raika-container {
+    padding: 55px 15px 45px;
+  }
+
+
+  .why-raika-heading h1 {
+    font-size: 27px;
+  }
+
+
+  .why-raika-intro {
+    font-size: 16px;
+  }
+
+
+  .why-raika-description {
+    font-size: 14px;
+  }
+
+
+  .why-raika-card {
+    padding: 20px 10px 30px;
+  }
+
+
+  .why-raika-icon {
+    font-size: 28px;
+  }
+
+
+  .why-raika-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .why-raika-card-content h2 {
+    font-size: 20px;
+  }
+
+
+  .why-raika-card-content p {
+    font-size: 14px;
+  }
+}

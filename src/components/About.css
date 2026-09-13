@@ -1,0 +1,288 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  width: 100%;
+  padding: 110px 6%;
+  background: #eeecf2;
+  font-family: "Calibri", "Calibri Body", Arial, sans-serif;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 70px;
+
+  direction: rtl;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-image {
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px rgba(90, 65, 100, 0.12);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+  text-align: right;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.about-small {
+  display: inline-block;
+
+  margin: 0 0 12px;
+
+  color: #684d7d;
+
+  font-size: 20px;
+  line-height: 1.5;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.about-content h2 {
+  margin: 0 0 28px;
+
+  color: #302536;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(38px, 4vw, 54px);
+
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+.about-content h2 span {
+  color: #684d7d;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.about-content p {
+  max-width: 570px;
+
+  margin: 0 0 18px;
+
+  color: #5f5664;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  line-height: 2;
+
+  font-weight: 400;
+}
+
+.about-content p strong {
+  color: #684d7d;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.about-line {
+  width: 65px;
+  height: 3px;
+
+  margin-top: 30px;
+
+  background: #72558a;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .about-section {
+    padding: 80px 5%;
+  }
+
+  .about-container {
+    gap: 45px;
+  }
+
+  .about-image {
+    height: 430px;
+  }
+
+  .about-content h2 {
+    font-size: 40px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .about-section {
+    padding: 75px 25px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-image {
+    height: 420px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-image {
+    height: 330px;
+    border-radius: 20px;
+  }
+
+  .about-small {
+    font-size: 17px;
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+  }
+
+  .about-line {
+    margin-top: 25px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+}

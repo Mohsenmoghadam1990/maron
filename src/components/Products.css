@@ -1,0 +1,953 @@
+
+/* =========================================================
+   PRODUCTS SECTION
+========================================================= */
+
+.products-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #e3e6e9;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  direction: rtl;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   PRODUCTS HEADING
+   نوار محصولات ما
+========================================================= */
+
+.products-heading {
+  position: relative;
+
+  width: 100%;
+  height: 64px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #011a23 0%,
+      #7bc9df 50%,
+      #67b8d5 100%
+    );
+
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+
+  direction: ltr;
+}
+
+
+/* =========================================================
+   HEART MARQUEE
+========================================================= */
+
+.heart-marquee {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HEART TRACK
+========================================================= */
+
+.heart-track {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  width: max-content;
+
+  white-space: nowrap;
+
+  animation:
+    heartScroll
+    24s
+    linear
+    infinite;
+}
+
+
+/* =========================================================
+   SOLID HEART
+   قلب‌های نرم و فانتزی
+========================================================= */
+
+.solid-heart {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-family:
+    "Arial Rounded MT Bold",
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  transform-origin: center center;
+
+  animation:
+    heartFloat
+    4.8s
+    ease-in-out
+    infinite;
+
+  will-change: transform;
+}
+
+
+/* =========================================================
+   PINK HEART
+========================================================= */
+
+.solid-heart:nth-child(4n + 1) {
+  color: #f1a6bd;
+
+  font-size: 35px;
+
+  filter:
+    drop-shadow(
+      0 2px 3px
+      rgba(241, 166, 189, 0.28)
+    );
+
+  animation-delay: -0.8s;
+}
+
+
+/* =========================================================
+   PURPLE HEART
+========================================================= */
+
+.solid-heart:nth-child(4n + 2) {
+  color: #b99bd5;
+
+  font-size: 31px;
+
+  filter:
+    drop-shadow(
+      0 2px 3px
+      rgba(185, 155, 213, 0.28)
+    );
+
+  animation-delay: -2.1s;
+}
+
+
+/* =========================================================
+   BLUE HEART
+========================================================= */
+
+.solid-heart:nth-child(4n + 3) {
+  color: #78c7dc;
+
+  font-size: 36px;
+
+  filter:
+    drop-shadow(
+      0 2px 3px
+      rgba(120, 199, 220, 0.28)
+    );
+
+  animation-delay: -3.4s;
+}
+
+
+/* =========================================================
+   PEACH HEART
+========================================================= */
+
+.solid-heart:nth-child(4n) {
+  color: #efb095;
+
+  font-size: 32px;
+
+  filter:
+    drop-shadow(
+      0 2px 3px
+      rgba(239, 176, 149, 0.28)
+    );
+
+  animation-delay: -4.1s;
+}
+
+
+/* =========================================================
+   HEART FLOAT
+   حرکت نرم و غیر یکنواخت
+========================================================= */
+
+@keyframes heartFloat {
+  0% {
+    transform:
+      translateY(1px)
+      rotate(-4deg)
+      scale(0.96);
+  }
+
+  14% {
+    transform:
+      translateY(-4px)
+      rotate(5deg)
+      scale(1.04);
+  }
+
+  28% {
+    transform:
+      translateY(1px)
+      rotate(-2deg)
+      scale(1);
+  }
+
+  43% {
+    transform:
+      translateY(4px)
+      rotate(7deg)
+      scale(0.95);
+  }
+
+  57% {
+    transform:
+      translateY(-2px)
+      rotate(-6deg)
+      scale(1.05);
+  }
+
+  72% {
+    transform:
+      translateY(2px)
+      rotate(3deg)
+      scale(0.98);
+  }
+
+  86% {
+    transform:
+      translateY(-3px)
+      rotate(-4deg)
+      scale(1.03);
+  }
+
+  100% {
+    transform:
+      translateY(1px)
+      rotate(-4deg)
+      scale(0.96);
+  }
+}
+
+
+/* =========================================================
+   HEART SCROLL
+========================================================= */
+
+@keyframes heartScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   PRODUCTS TITLE
+========================================================= */
+
+.products-title-text {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    6px
+    25px;
+
+  color: #ffffff;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  letter-spacing: -0.5px;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 1px 3px
+    rgba(55, 92, 110, 0.22);
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.category-block {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HAPPY LADY
+========================================================= */
+
+.lady-category {
+  width: 100%;
+
+  min-height: 600px;
+
+  margin: 0;
+
+  padding:
+    24px
+    6%
+    65px;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(244, 239, 249, 0.05),
+      rgba(244, 239, 249, 0.15)
+    ),
+    url("../assets/LADY -1.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   LADY CONTENT
+========================================================= */
+
+.lady-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CATEGORY TITLE
+========================================================= */
+
+.category-title {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  margin:
+    0
+    0
+    32px;
+}
+
+
+/* =========================================================
+   PERSIAN CATEGORY TITLE
+========================================================= */
+
+.category-title p {
+  margin:
+    0
+    0
+    6px;
+
+  color: #55435d;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1.9;
+
+  letter-spacing: -0.35px;
+
+  text-shadow:
+    0 1px 2px
+    rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   ENGLISH CATEGORY TITLE
+========================================================= */
+
+.category-title h3 {
+  position: relative;
+
+  margin: 0;
+
+  padding:
+    0
+    0
+    10px;
+
+  color: #3d2c45;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 29px;
+
+  font-weight: 650;
+
+  line-height: 1.5;
+
+  letter-spacing: -0.4px;
+
+  text-shadow:
+    0 1px 2px
+    rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   SMALL LINE UNDER TITLE
+========================================================= */
+
+.category-title h3::after {
+  content: "";
+
+  position: absolute;
+
+  right: 50%;
+
+  bottom: 0;
+
+  width: 42px;
+
+  height: 2px;
+
+  transform:
+    translateX(50%);
+
+  background: #9c7aaa;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   PRODUCT SLIDER
+========================================================= */
+
+.product-slider {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: transparent;
+
+  border: 0;
+
+  box-shadow: none;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-card img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   HAPPY LADY SLIDER
+========================================================= */
+
+.lady-slider {
+  max-width: 1200px;
+}
+
+
+.lady-slider .product-card {
+  width:
+    calc(33.333% - 15px);
+}
+
+
+.lady-slider .product-card img {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HAPPY BABY
+========================================================= */
+
+.baby-category {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 620px;
+
+  margin: 0;
+
+  padding:
+    60px
+    6%
+    75px;
+
+  background-image:
+    url("../assets/baby-1.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   BABY OVERLAY
+========================================================= */
+
+.baby-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(244, 239, 249, 0.08);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BABY CONTENT
+========================================================= */
+
+.baby-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   HAPPY BABY TITLE
+========================================================= */
+
+.baby-content .category-title {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HAPPY BABY SLIDER
+========================================================= */
+
+.baby-slider {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transform:
+    translateX(400px);
+}
+
+
+.baby-slider .product-card {
+  width:
+    min(420px, 75%);
+}
+
+
+.baby-slider .product-card img {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .products-heading {
+    height: 56px;
+  }
+
+
+  .products-title-text {
+    font-size: 22px;
+
+    padding:
+      6px
+      24px
+      7px;
+  }
+
+
+  .heart-track {
+    gap: 30px;
+
+    animation-duration: 22s;
+  }
+
+
+  .solid-heart {
+    font-size: 32px;
+  }
+
+
+  .lady-category {
+    padding:
+      22px
+      5%
+      55px;
+  }
+
+
+  .category-title {
+    margin-bottom: 28px;
+  }
+
+
+  .category-title p {
+    font-size: 20px;
+  }
+
+
+  .category-title h3 {
+    font-size: 27px;
+  }
+
+
+  .product-slider {
+    gap: 15px;
+  }
+
+
+  .lady-slider .product-card {
+    width:
+      calc(33.333% - 10px);
+  }
+
+
+  .baby-category {
+    padding:
+      50px
+      5%
+      65px;
+  }
+
+
+  .baby-slider {
+    transform:
+      translateX(300px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .products-heading {
+    height: 49px;
+  }
+
+
+  .products-title-text {
+    font-size: 19px;
+
+    padding:
+      5px
+      20px
+      6px;
+  }
+
+
+  .heart-track {
+    gap: 24px;
+
+    animation-duration: 19s;
+  }
+
+
+  .solid-heart {
+    font-size: 29px;
+  }
+
+
+  .solid-heart:nth-child(4n + 1) {
+    font-size: 30px;
+  }
+
+
+  .solid-heart:nth-child(4n + 2) {
+    font-size: 27px;
+  }
+
+
+  .solid-heart:nth-child(4n + 3) {
+    font-size: 31px;
+  }
+
+
+  .solid-heart:nth-child(4n) {
+    font-size: 28px;
+  }
+
+
+  .lady-category {
+    padding:
+      20px
+      5%
+      50px;
+  }
+
+
+  .category-title {
+    margin-bottom: 25px;
+  }
+
+
+  .category-title p {
+    font-size: 18px;
+
+    font-weight: 500;
+  }
+
+
+  .category-title h3 {
+    font-size: 24px;
+  }
+
+
+  .lady-slider {
+    gap: 10px;
+  }
+
+
+  .lady-slider .product-card {
+    width:
+      calc(33.333% - 7px);
+  }
+
+
+  .baby-category {
+    min-height: 500px;
+
+    padding:
+      45px
+      5%
+      55px;
+  }
+
+
+  .baby-slider .product-card {
+    width: 85%;
+  }
+
+
+  .baby-slider {
+    transform:
+      translateX(180px);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .products-heading {
+    height: 46px;
+  }
+
+
+  .products-title-text {
+    font-size: 18px;
+
+    padding:
+      4px
+      16px
+      5px;
+  }
+
+
+  .heart-track {
+    gap: 20px;
+
+    animation-duration: 17s;
+  }
+
+
+  .solid-heart {
+    font-size: 27px;
+  }
+
+
+  .category-title p {
+    font-size: 16px;
+  }
+
+
+  .category-title h3 {
+    font-size: 22px;
+  }
+
+
+  .lady-category {
+    padding-top: 18px;
+  }
+
+
+  .baby-category {
+    padding-top: 40px;
+  }
+
+
+  .baby-slider {
+    transform:
+      translateX(120px);
+  }
+}
+
