@@ -1,4 +1,3 @@
-
 /* =========================================================
    PRODUCTS SECTION
 ========================================================= */
@@ -18,13 +17,15 @@
     sans-serif;
 
   direction: rtl;
+
   overflow: hidden;
+
+  box-sizing: border-box;
 }
 
 
 /* =========================================================
    PRODUCTS HEADING
-   نوار محصولات ما
 ========================================================= */
 
 .products-heading {
@@ -55,6 +56,8 @@
   box-shadow: none;
 
   direction: ltr;
+
+  box-sizing: border-box;
 }
 
 
@@ -103,7 +106,6 @@
 
 /* =========================================================
    SOLID HEART
-   قلب‌های نرم و فانتزی
 ========================================================= */
 
 .solid-heart {
@@ -121,6 +123,7 @@
     sans-serif;
 
   font-size: 34px;
+
   font-weight: 700;
 
   line-height: 1;
@@ -215,7 +218,6 @@
 
 /* =========================================================
    HEART FLOAT
-   حرکت نرم و غیر یکنواخت
 ========================================================= */
 
 @keyframes heartFloat {
@@ -302,12 +304,11 @@
   z-index: 5;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  padding:
-    6px
-    25px;
+  padding: 6px 25px;
 
   color: #ffffff;
 
@@ -346,6 +347,8 @@
   margin: 0;
 
   overflow: hidden;
+
+  box-sizing: border-box;
 }
 
 
@@ -412,7 +415,6 @@
   flex-direction: column;
 
   align-items: center;
-
   justify-content: center;
 
   text-align: center;
@@ -530,10 +532,11 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 22px;
+
+  box-sizing: border-box;
 }
 
 
@@ -553,6 +556,8 @@
   box-shadow: none;
 
   flex-shrink: 0;
+
+  box-sizing: border-box;
 }
 
 
@@ -564,12 +569,13 @@
   display: block;
 
   width: 100%;
-
   height: auto;
 
   object-fit: contain;
 
   border: 0;
+
+  max-width: 100%;
 }
 
 
@@ -581,12 +587,10 @@
   max-width: 1200px;
 }
 
-
 .lady-slider .product-card {
   width:
     calc(33.333% - 15px);
 }
-
 
 .lady-slider .product-card img {
   width: 100%;
@@ -619,6 +623,8 @@
   background-position: center;
 
   background-repeat: no-repeat;
+
+  box-sizing: border-box;
 }
 
 
@@ -648,6 +654,8 @@
   z-index: 2;
 
   width: 100%;
+
+  box-sizing: border-box;
 }
 
 
@@ -683,19 +691,39 @@
 
   justify-content: center;
 
-  transform:
-    translateX(400px);
+  /*
+    مهم:
+    دیگر اسلایدر را با translateX
+    از صفحه خارج نمی‌کنیم.
+  */
+
+  transform: none;
 }
 
+
+/* =========================================================
+   HAPPY BABY CARD
+========================================================= */
 
 .baby-slider .product-card {
-  width:
-    min(420px, 75%);
+  width: min(420px, 75%);
+
+  max-width: 420px;
 }
 
+
+/* =========================================================
+   HAPPY BABY IMAGE
+========================================================= */
 
 .baby-slider .product-card img {
   width: 100%;
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
 }
 
 
@@ -709,7 +737,6 @@
     height: 56px;
   }
 
-
   .products-title-text {
     font-size: 22px;
 
@@ -719,18 +746,15 @@
       7px;
   }
 
-
   .heart-track {
     gap: 30px;
 
     animation-duration: 22s;
   }
 
-
   .solid-heart {
     font-size: 32px;
   }
-
 
   .lady-category {
     padding:
@@ -739,32 +763,26 @@
       55px;
   }
 
-
   .category-title {
     margin-bottom: 28px;
   }
-
 
   .category-title p {
     font-size: 20px;
   }
 
-
   .category-title h3 {
     font-size: 27px;
   }
-
 
   .product-slider {
     gap: 15px;
   }
 
-
   .lady-slider .product-card {
     width:
       calc(33.333% - 10px);
   }
-
 
   .baby-category {
     padding:
@@ -773,10 +791,12 @@
       65px;
   }
 
-
   .baby-slider {
-    transform:
-      translateX(300px);
+    transform: none;
+  }
+
+  .baby-slider .product-card {
+    width: min(380px, 70%);
   }
 }
 
@@ -791,7 +811,6 @@
     height: 49px;
   }
 
-
   .products-title-text {
     font-size: 19px;
 
@@ -801,38 +820,37 @@
       6px;
   }
 
-
   .heart-track {
     gap: 24px;
 
     animation-duration: 19s;
   }
 
-
   .solid-heart {
     font-size: 29px;
   }
-
 
   .solid-heart:nth-child(4n + 1) {
     font-size: 30px;
   }
 
-
   .solid-heart:nth-child(4n + 2) {
     font-size: 27px;
   }
-
 
   .solid-heart:nth-child(4n + 3) {
     font-size: 31px;
   }
 
-
   .solid-heart:nth-child(4n) {
     font-size: 28px;
   }
 
+
+  /* =======================================================
+     HAPPY LADY
+     ظاهر فعلی حفظ شده
+  ======================================================= */
 
   .lady-category {
     padding:
@@ -841,11 +859,9 @@
       50px;
   }
 
-
   .category-title {
     margin-bottom: 25px;
   }
-
 
   .category-title p {
     font-size: 18px;
@@ -853,16 +869,13 @@
     font-weight: 500;
   }
 
-
   .category-title h3 {
     font-size: 24px;
   }
 
-
   .lady-slider {
     gap: 10px;
   }
-
 
   .lady-slider .product-card {
     width:
@@ -870,24 +883,75 @@
   }
 
 
+  /* =======================================================
+     HAPPY BABY MOBILE
+  ======================================================= */
+
   .baby-category {
+    width: 100%;
+
     min-height: 500px;
 
     padding:
       45px
-      5%
+      15px
       55px;
+
+    background-size: cover;
+
+    background-position: center;
   }
 
+  .baby-content {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .baby-content .category-title {
+    width: 100%;
+
+    margin-bottom: 25px;
+  }
+
+  .baby-slider {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transform: none;
+
+    margin: 0;
+
+    padding: 0;
+  }
 
   .baby-slider .product-card {
     width: 85%;
+
+    max-width: 330px;
+
+    margin: 0 auto;
   }
 
+  .baby-slider .product-card img {
+    display: block;
 
-  .baby-slider {
-    transform:
-      translateX(180px);
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    margin: 0 auto;
   }
 }
 
@@ -902,7 +966,6 @@
     height: 46px;
   }
 
-
   .products-title-text {
     font-size: 18px;
 
@@ -912,42 +975,44 @@
       5px;
   }
 
-
   .heart-track {
     gap: 20px;
 
     animation-duration: 17s;
   }
 
-
   .solid-heart {
     font-size: 27px;
   }
-
 
   .category-title p {
     font-size: 16px;
   }
 
-
   .category-title h3 {
     font-size: 22px;
   }
-
 
   .lady-category {
     padding-top: 18px;
   }
 
-
   .baby-category {
-    padding-top: 40px;
-  }
+    min-height: 460px;
 
+    padding:
+      40px
+      12px
+      45px;
+  }
 
   .baby-slider {
-    transform:
-      translateX(120px);
+    transform: none;
+  }
+
+  .baby-slider .product-card {
+    width: 88%;
+
+    max-width: 300px;
   }
 }
-

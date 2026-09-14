@@ -1,6 +1,4 @@
-
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import "./Products.css";
 
 import lady1 from "../assets/happy-lady/happy-lady-1.jpg";
@@ -130,17 +128,13 @@ function Products() {
       className="products-section"
       dir="rtl"
     >
-
       {/* =====================================================
           PRODUCTS TITLE / HEART MARQUEE
       ===================================================== */}
 
       <div className="products-heading">
-
         <div className="heart-marquee">
           <div className="heart-track">
-
-            {/* قلب‌های توپر */}
             {Array.from({ length: 18 }).map(
               (_, index) => (
                 <span
@@ -152,7 +146,6 @@ function Products() {
               )
             )}
 
-            {/* تکرار برای حرکت بدون قطع شدن */}
             {Array.from({ length: 18 }).map(
               (_, index) => (
                 <span
@@ -163,28 +156,21 @@ function Products() {
                 </span>
               )
             )}
-
           </div>
         </div>
 
-        {/* عنوان روی نوار */}
         <span className="products-title-text">
           محصولات ما
         </span>
-
       </div>
-
 
       {/* =====================================================
           HAPPY LADY
       ===================================================== */}
 
       <div className="category-block lady-category">
-
         <div className="lady-content">
-
           <div className="category-title">
-
             <p>
               مراقبت و آرامش بانوان
             </p>
@@ -192,49 +178,35 @@ function Products() {
             <h3>
               Happy Lady
             </h3>
-
           </div>
 
-
           <div className="product-slider lady-slider">
-
             {visibleLady.map(
               (product, index) => (
-
                 <div
                   className="product-card"
                   key={`lady-${ladyIndex}-${index}`}
                 >
-
                   <img
                     src={product.image}
                     alt={`${product.title} ${index + 1}`}
                   />
-
                 </div>
-
               )
             )}
-
           </div>
-
         </div>
-
       </div>
-
 
       {/* =====================================================
           HAPPY BABY
       ===================================================== */}
 
       <div className="category-block baby-category">
-
         <div className="baby-overlay"></div>
 
         <div className="baby-content">
-
           <div className="category-title">
-
             <p>
               برای کوچولوهای دوست‌داشتنی
             </p>
@@ -242,36 +214,25 @@ function Products() {
             <h3>
               Happy Baby
             </h3>
-
           </div>
 
-
           <div className="product-slider baby-slider">
-
             {visibleBaby.map(
               (product, index) => (
-
                 <div
                   className="product-card"
                   key={`baby-${babyIndex}-${index}`}
                 >
-
                   <img
                     src={product.image}
                     alt={`${product.title} ${index + 1}`}
                   />
-
                 </div>
-
               )
             )}
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

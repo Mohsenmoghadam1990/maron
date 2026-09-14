@@ -1,9 +1,13 @@
 
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updateMusicState = (event) => {
@@ -42,14 +46,75 @@ function Navbar() {
     }
   };
 
+  /*
+  =========================================================
+    SCROLL TO HOME SECTION
+  =========================================================
+  */
+
+  const handleSectionClick = (event, sectionId) => {
+    event.preventDefault();
+
+    /*
+      اگر در صفحه اصلی هستیم،
+      فقط به همان بخش اسکرول می‌کنیم.
+    */
+
+    if (location.pathname === "/") {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      return;
+    }
+
+    /*
+      اگر در یکی از صفحات دیگر هستیم،
+      اول به صفحه اصلی می‌رویم.
+    */
+
+    navigate("/");
+
+    /*
+      بعد از برگشت به Home،
+      به بخش مورد نظر اسکرول می‌کنیم.
+    */
+
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 300);
+  };
+
   return (
     <nav className="navbar" dir="ltr">
 
+      {/* =====================================================
+          BRAND
+      ===================================================== */}
+
       <div className="navbar-brand">
 
-        <a href="#home" className="navbar-logo">
+        <button
+          type="button"
+          className="navbar-logo"
+          onClick={(event) =>
+            handleSectionClick(event, "home")
+          }
+        >
           کهن تجارت رایکا
-        </a>
+        </button>
 
         <button
           type="button"
@@ -58,10 +123,14 @@ function Navbar() {
           }`}
           onClick={handleMusicClick}
           aria-label={
-            isMusicPlaying ? "توقف موزیک" : "پخش موزیک"
+            isMusicPlaying
+              ? "توقف موزیک"
+              : "پخش موزیک"
           }
           title={
-            isMusicPlaying ? "توقف موزیک" : "پخش موزیک"
+            isMusicPlaying
+              ? "توقف موزیک"
+              : "پخش موزیک"
           }
         >
           <span>♪</span>
@@ -69,26 +138,65 @@ function Navbar() {
 
       </div>
 
+      {/* =====================================================
+          MENU
+      ===================================================== */}
+
       <ul className="navbar-menu" dir="rtl">
 
         <li>
-          <a href="#home">خانه</a>
+          <a
+            href="#home"
+            onClick={(event) =>
+              handleSectionClick(event, "home")
+            }
+          >
+            خانه
+          </a>
         </li>
 
         <li>
-          <a href="#products">محصولات</a>
+          <a
+            href="#products"
+            onClick={(event) =>
+              handleSectionClick(event, "products")
+            }
+          >
+            محصولات
+          </a>
         </li>
 
         <li>
-          <a href="#education">مراقبت و آموزش</a>
+          <a
+            href="#education"
+            onClick={(event) =>
+              handleSectionClick(event, "education")
+            }
+          >
+            مراقبت و آموزش
+          </a>
         </li>
 
         <li>
-          <a href="#about">درباره ما</a>
+          <a
+            href="#about"
+            onClick={(event) =>
+              handleSectionClick(event, "about")
+            }
+          >
+            درباره ما
+          </a>
         </li>
 
         <li>
-          <a href="#contact">تماس با ما</a>
+          <a
+            href="#contact"
+            onClick={(event) =>
+              handleSectionClick(event, "contact")
+            }
+          >
+            تماس با ما
+          </a>
         </li>
 
       </ul>

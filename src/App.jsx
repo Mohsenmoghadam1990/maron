@@ -1,8 +1,7 @@
-
 import "./App.css";
 
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   Link,
@@ -52,13 +51,9 @@ function HomePage() {
         ================================================= */}
 
         <header className="header-area">
-
           <div className="top-navigation">
-
             <Navbar />
-
           </div>
-
         </header>
 
         {/* =================================================
@@ -189,7 +184,7 @@ function StyleSelectionPage() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <Routes>
 
@@ -258,9 +253,8 @@ function App() {
 
       </Routes>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
 export default App;
-

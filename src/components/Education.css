@@ -7,33 +7,30 @@
   width: 100%;
   min-height: 650px;
   padding: 110px 6%;
-
   background-image: url("../assets/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   overflow: hidden;
   direction: rtl;
-
   font-family:
-    "Calibri",
-    "Calibri Body",
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
     Arial,
     sans-serif;
+  box-sizing: border-box;
 }
 
 
 /* =========================================================
    BACKGROUND OVERLAY
-   تصویر عمداً واضح‌تر نگه داشته شده
 ========================================================= */
 
 .education-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-
   background:
     linear-gradient(
       90deg,
@@ -52,16 +49,16 @@
 .education-container {
   position: relative;
   z-index: 2;
-
   width: 100%;
   max-width: 1250px;
   min-height: 430px;
-
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  box-sizing: border-box;
 }
 
 
@@ -72,8 +69,8 @@
 .education-content {
   width: 60%;
   max-width: 720px;
-
   text-align: right;
+  box-sizing: border-box;
 }
 
 
@@ -106,7 +103,6 @@
 
   font-size: clamp(36px, 4vw, 52px);
   line-height: 1.5;
-
   font-weight: 700;
 
   text-shadow:
@@ -120,7 +116,6 @@
 
 .education-content h2 span {
   display: inline-block;
-
   color: #76558f;
 }
 
@@ -160,7 +155,6 @@
 
   font-size: 21px;
   line-height: 2;
-
   font-weight: 500;
 
   text-shadow:
@@ -190,7 +184,6 @@
   color: #ffffff;
 
   font-family: inherit;
-
   font-size: 20px;
   font-weight: 700;
 
@@ -227,7 +220,6 @@
 
 .education-button-arrow {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
@@ -257,7 +249,6 @@
     0 15px 32px rgba(118, 85, 143, 0.34);
 }
 
-
 .education-button:hover .education-button-arrow {
   transform: translateX(-5px);
 }
@@ -276,17 +267,16 @@
     background-position: center;
   }
 
-
   .education-overlay {
     background:
       rgba(248, 243, 251, 0.25);
   }
 
-
   .education-container {
+    min-height: 440px;
+
     justify-content: center;
   }
-
 
   .education-content {
     width: 85%;
@@ -295,24 +285,22 @@
     text-align: center;
   }
 
-
   .education-label {
     font-size: 20px;
   }
 
-
   .education-content h2 {
     font-size: 40px;
+    line-height: 1.5;
   }
-
 
   .education-line {
     margin: 22px auto 28px;
   }
 
-
   .education-text {
     font-size: 19px;
+    line-height: 1.9;
   }
 }
 
@@ -324,65 +312,97 @@
 @media (max-width: 700px) {
 
   .education-section {
-    min-height: 650px;
-    padding: 70px 20px;
+    width: 100%;
+    min-height: auto;
+
+    padding: 55px 18px 60px;
 
     background-position: center;
-  }
+    background-size: cover;
 
+    box-sizing: border-box;
+  }
 
   .education-overlay {
     background:
-      rgba(248, 243, 251, 0.32);
+      rgba(248, 243, 251, 0.38);
   }
 
+  .education-container {
+    width: 100%;
+    min-height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .education-content {
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
 
     text-align: center;
+    box-sizing: border-box;
   }
-
 
   .education-label {
-    font-size: 19px;
+    margin: 0 0 8px;
 
-    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.8;
   }
-
 
   .education-content h2 {
-    font-size: 34px;
-    line-height: 1.6;
+    margin: 0;
+
+    font-size: 29px;
+    line-height: 1.65;
   }
 
+  .education-content h2 span {
+    display: inline;
+  }
 
   .education-line {
-    width: 60px;
+    width: 55px;
     height: 3px;
 
-    margin: 18px auto 25px;
+    margin: 16px auto 22px;
   }
-
 
   .education-text {
-    font-size: 18px;
+    margin: 0 auto 15px;
+
+    width: 100%;
+    max-width: 470px;
+
+    font-size: 16px;
     line-height: 2;
 
-    margin-bottom: 18px;
+    font-weight: 500;
   }
-
 
   .education-button {
-    font-size: 18px;
+    margin-top: 12px;
 
-    padding: 12px 24px;
+    padding: 11px 22px;
+
+    font-size: 16px;
+
+    gap: 10px;
+
+    box-shadow:
+      0 8px 20px rgba(118, 85, 143, 0.25);
   }
 
-
   .education-button-arrow {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -391,44 +411,75 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
 
   .education-section {
-    min-height: 620px;
-    padding: 60px 15px;
+    padding: 48px 15px 52px;
   }
-
-
-  .education-overlay {
-    background:
-      rgba(248, 243, 251, 0.35);
-  }
-
-
-  .education-content h2 {
-    font-size: 30px;
-  }
-
 
   .education-label {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 7px;
   }
 
+  .education-content h2 {
+    font-size: 26px;
+    line-height: 1.7;
+  }
+
+  .education-line {
+    width: 50px;
+    margin: 14px auto 20px;
+  }
 
   .education-text {
-    font-size: 17px;
+    font-size: 15px;
     line-height: 2;
+    margin-bottom: 13px;
   }
-
 
   .education-button {
-    padding: 11px 22px;
-
-    font-size: 17px;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 25px;
   }
 
+  .education-button-arrow {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .education-section {
+    padding: 42px 13px 48px;
+  }
+
+  .education-content h2 {
+    font-size: 24px;
+    line-height: 1.7;
+  }
+
+  .education-label {
+    font-size: 15px;
+  }
+
+  .education-text {
+    font-size: 14px;
+    line-height: 1.95;
+  }
+
+  .education-button {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
 
   .education-button-arrow {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
