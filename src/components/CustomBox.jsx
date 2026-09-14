@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -14,13 +14,8 @@ import {
 } from "react-icons/fi";
 
 import "./CustomBox.css";
-
 import box2Bg from "../assets/box-2.jpg";
 
-
-/* =========================================================
-   CUSTOM BOX
-========================================================= */
 
 function CustomBox() {
   const [isReady, setIsReady] = useState(false);
@@ -78,44 +73,15 @@ function CustomBox() {
 
 
   /* =========================================================
-     BACK BUTTON POSITION
-     مثل صفحه FIRST PERIOD
+     RENDER
   ========================================================= */
-
-  useEffect(() => {
-    const updateBackButton = () => {
-      const backButton = document.getElementById(
-        "custom-box-back-button-fixed"
-      );
-
-      if (!backButton) return;
-
-      backButton.style.top = `${window.scrollY + 25}px`;
-      backButton.style.right = "25px";
-    };
-
-    updateBackButton();
-
-    window.addEventListener("scroll", updateBackButton, {
-      passive: true,
-    });
-
-    window.addEventListener("resize", updateBackButton);
-
-    return () => {
-      window.removeEventListener("scroll", updateBackButton);
-      window.removeEventListener("resize", updateBackButton);
-    };
-  }, []);
-
 
   return (
     <div className="custom-box-page">
 
-
       {/* =====================================================
           BACK BUTTON
-      ====================================================== */}
+      ===================================================== */}
 
       <Link
         id="custom-box-back-button-fixed"
@@ -129,17 +95,17 @@ function CustomBox() {
 
 
       {/* =====================================================
-          CUSTOM BOX SECTION
-      ====================================================== */}
+          MAIN SECTION
+      ===================================================== */}
 
       <section className="custom-box-section">
 
         <div className="custom-box-container">
 
 
-          {/* ===================================================
+          {/* =================================================
               HEADER
-          ==================================================== */}
+          ================================================= */}
 
           <header className="custom-box-heading">
 
@@ -163,25 +129,26 @@ function CustomBox() {
           </header>
 
 
-          {/* ===================================================
-              MAIN
-          ==================================================== */}
+          {/* =================================================
+              MAIN CONTENT
+          ================================================= */}
 
           <div className="custom-box-main">
 
 
             {/* =================================================
                 IMAGE
-            ================================================== */}
+            ================================================= */}
 
             <div className="custom-box-image-wrapper">
 
-              <div
-                className="custom-box-image"
-                style={{
-                  backgroundImage: `url(${box2Bg})`,
-                }}
-              >
+              <div className="custom-box-image">
+
+                <img
+                  src={box2Bg}
+                  alt="باکس آمادگی اولین پریود"
+                  className="custom-box-image-real"
+                />
 
                 <div className="custom-box-image-overlay"></div>
 
@@ -208,7 +175,7 @@ function CustomBox() {
 
             {/* =================================================
                 CONTENT
-            ================================================== */}
+            ================================================= */}
 
             <div className="custom-box-content">
 
@@ -230,11 +197,12 @@ function CustomBox() {
 
               {/* =================================================
                   ITEMS
-              ================================================== */}
+              ================================================= */}
 
               <div className="custom-box-items">
 
                 {boxItems.map((item, index) => (
+
                   <div
                     className="custom-box-item"
                     key={index}
@@ -257,6 +225,7 @@ function CustomBox() {
                     </div>
 
                   </div>
+
                 ))}
 
               </div>
@@ -264,7 +233,7 @@ function CustomBox() {
 
               {/* =================================================
                   READY BUTTON
-              ================================================== */}
+              ================================================= */}
 
               <button
                 type="button"
@@ -281,9 +250,10 @@ function CustomBox() {
 
               {/* =================================================
                   SUCCESS
-              ================================================== */}
+              ================================================= */}
 
               {isReady && (
+
                 <div className="custom-box-success">
 
                   <span className="success-icon">
@@ -308,6 +278,7 @@ function CustomBox() {
                   </div>
 
                 </div>
+
               )}
 
             </div>
@@ -315,9 +286,9 @@ function CustomBox() {
           </div>
 
 
-          {/* ===================================================
+          {/* =================================================
               BOTTOM MESSAGE
-          ==================================================== */}
+          ================================================= */}
 
           <div className="custom-box-bottom">
 
@@ -336,11 +307,9 @@ function CustomBox() {
         </div>
 
 
-        {/* =====================================================
+        {/* ===================================================
             BACK TO TOP
-            فقط متعلق به همین SECTION است
-            position: fixed ندارد
-        ====================================================== */}
+        =================================================== */}
 
         <button
           type="button"
@@ -357,6 +326,7 @@ function CustomBox() {
     </div>
   );
 }
+
 
 export default CustomBox;
 

@@ -89,7 +89,6 @@
   text-align: center;
 }
 
-
 .custom-box-label {
   margin:
     0
@@ -101,7 +100,6 @@
   font-size: 18px;
   font-weight: 600;
 }
-
 
 .custom-box-heading h1 {
   margin: 0;
@@ -116,14 +114,13 @@
     );
 
   font-weight: 700;
+
   line-height: 1.3;
 }
-
 
 .custom-box-heading h1 span {
   color: #9c6ead;
 }
-
 
 .custom-box-line {
   width: 80px;
@@ -137,7 +134,6 @@
 
   background: #b991c5;
 }
-
 
 .custom-box-description {
   max-width: 700px;
@@ -173,49 +169,106 @@
 
 
 /* =========================================================
-   IMAGE
+   IMAGE WRAPPER
+   بدون کادر
 ========================================================= */
 
 .custom-box-image-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
+
+  overflow: visible;
 }
 
+
+/* =========================================================
+   IMAGE
+   بدون کادر و بدون پس زمینه
+========================================================= */
 
 .custom-box-image {
   position: relative;
 
-  width: 100%;
-  min-height: 600px;
+  width: 85%;
 
-  border-radius: 30px;
+  margin: 0 auto;
 
-  overflow: hidden;
+  overflow: visible;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0;
 
-  box-shadow:
-    0
-    20px
-    50px
-    rgba(83, 54, 94, 0.16);
+  background: transparent;
+
+  box-shadow: none;
 }
 
+
+/* =========================================================
+   REAL IMAGE
+   عکس کامل و بدون برش
+========================================================= */
+
+.custom-box-image-real {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
 
 .custom-box-image-overlay {
   position: absolute;
 
-  inset: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 45%;
+
+  z-index: 1;
+
+  pointer-events: none;
 
   background:
     linear-gradient(
       to top,
-      rgba(58, 35, 67, 0.58),
-      rgba(58, 35, 67, 0.05)
+      rgba(
+        58,
+        35,
+        67,
+        0.52
+      ),
+      rgba(
+        58,
+        35,
+        67,
+        0
+      )
     );
 }
 
+
+/* =========================================================
+   IMAGE CONTENT
+========================================================= */
 
 .custom-box-image-content {
   position: absolute;
@@ -227,34 +280,31 @@
   z-index: 2;
 
   padding:
-    45px
-    35px;
+    40px
+    30px;
 
   text-align: center;
 
   color: #ffffff;
 }
 
-
 .custom-box-image-icon {
   display: block;
 
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
-  font-size: 42px;
+  font-size: 40px;
 }
-
 
 .custom-box-image-content h2 {
   margin:
     0
     0
-    10px;
+    8px;
 
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
 }
-
 
 .custom-box-image-content p {
   margin: 0;
@@ -273,7 +323,6 @@
   width: 100%;
 }
 
-
 .custom-box-small-title {
   display: inline-block;
 
@@ -284,7 +333,6 @@
   font-size: 16px;
   font-weight: 700;
 }
-
 
 .custom-box-content-title {
   margin:
@@ -300,11 +348,9 @@
   line-height: 1.4;
 }
 
-
 .custom-box-content-title span {
   color: #a06fb1;
 }
-
 
 .custom-box-intro {
   margin:
@@ -336,7 +382,6 @@
   margin-bottom: 35px;
 }
 
-
 .custom-box-item {
   display: flex;
 
@@ -360,13 +405,17 @@
     0
     5px
     20px
-    rgba(91, 64, 100, 0.06);
+    rgba(
+      91,
+      64,
+      100,
+      0.06
+    );
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-
 
 .custom-box-item:hover {
   transform:
@@ -376,9 +425,18 @@
     0
     10px
     25px
-    rgba(91, 64, 100, 0.11);
+    rgba(
+      91,
+      64,
+      100,
+      0.11
+    );
 }
 
+
+/* =========================================================
+   ITEM ICON
+========================================================= */
 
 .custom-box-item-icon {
   display: flex;
@@ -398,7 +456,6 @@
   color: #8e62a0;
 }
 
-
 .custom-box-item-icon svg {
   width: 20px;
   height: 20px;
@@ -407,10 +464,13 @@
 }
 
 
+/* =========================================================
+   ITEM TEXT
+========================================================= */
+
 .custom-box-item-text {
   min-width: 0;
 }
-
 
 .custom-box-item-text h3 {
   margin:
@@ -423,7 +483,6 @@
   font-size: 17px;
   font-weight: 700;
 }
-
 
 .custom-box-item-text p {
   margin: 0;
@@ -477,13 +536,17 @@
     0
     10px
     25px
-    rgba(125, 83, 139, 0.18);
+    rgba(
+      125,
+      83,
+      139,
+      0.18
+    );
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-
 
 .custom-box-ready:hover {
   transform:
@@ -493,9 +556,13 @@
     0
     14px
     30px
-    rgba(125, 83, 139, 0.24);
+    rgba(
+      125,
+      83,
+      139,
+      0.24
+    );
 }
-
 
 .custom-box-ready.active {
   background:
@@ -545,7 +612,12 @@
     0
     8px
     25px
-    rgba(91, 64, 100, 0.07);
+    rgba(
+      91,
+      64,
+      100,
+      0.07
+    );
 
   animation:
     customBoxSuccess
@@ -553,13 +625,11 @@
     ease;
 }
 
-
 .success-icon {
   flex-shrink: 0;
 
   font-size: 30px;
 }
-
 
 .custom-box-success strong {
   display: block;
@@ -571,7 +641,6 @@
   font-size: 18px;
 }
 
-
 .custom-box-success p {
   margin: 0;
 
@@ -582,8 +651,8 @@
   line-height: 1.9;
 }
 
-
 @keyframes customBoxSuccess {
+
   from {
     opacity: 0;
 
@@ -622,13 +691,11 @@
   text-align: center;
 }
 
-
 .custom-box-bottom span {
   flex-shrink: 0;
 
   font-size: 25px;
 }
-
 
 .custom-box-bottom p {
   margin: 0;
@@ -643,8 +710,6 @@
 
 /* =========================================================
    BACK BUTTON
-   مثل FIRST PERIOD
-   با اسکرول همراه صفحه حرکت نمی‌کند
 ========================================================= */
 
 .custom-box-back {
@@ -727,7 +792,6 @@
     box-shadow 0.25s ease !important;
 }
 
-
 .custom-box-back:hover {
   background: #ffffff !important;
 
@@ -745,7 +809,6 @@
     ) !important;
 }
 
-
 .custom-box-back svg {
   display: block !important;
 
@@ -757,7 +820,6 @@
   stroke-width: 2 !important;
 }
 
-
 .custom-box-back span {
   display: inline-block !important;
 
@@ -767,9 +829,6 @@
 
 /* =========================================================
    BACK TO TOP
-   بسیار مهم:
-   این دکمه FIXED نیست
-   داخل SECTION قرار دارد
 ========================================================= */
 
 .custom-box-top-button {
@@ -785,8 +844,8 @@
 
   display: flex !important;
 
-  align-items: center !important;
-  justify-content: center !important;
+  align-items: center;
+  justify-content: center;
 
   width: 46px !important;
   height: 46px !important;
@@ -839,7 +898,6 @@
     transform 0.25s ease !important;
 }
 
-
 .custom-box-top-button:hover {
   background: #ffffff !important;
 
@@ -858,7 +916,6 @@
     translateX(-50%)
     translateY(-4px) !important;
 }
-
 
 .custom-box-top-button svg {
   display: block !important;
@@ -884,18 +941,26 @@
     gap: 50px;
   }
 
-
-  .custom-box-image {
-    min-height: 500px;
+  .custom-box-image-wrapper {
+    width: 100%;
   }
 
+  .custom-box-image {
+    width: 75%;
+
+    margin: 0 auto;
+  }
+
+  .custom-box-image-real {
+    width: 100%;
+    height: auto;
+  }
 
   .custom-box-content {
     max-width: 800px;
 
     margin: 0 auto;
   }
-
 }
 
 
@@ -912,33 +977,44 @@
       90px;
   }
 
-
   .custom-box-heading {
     margin-bottom: 45px;
   }
-
 
   .custom-box-label {
     font-size: 16px;
   }
 
-
   .custom-box-heading h1 {
     font-size: 34px;
   }
-
 
   .custom-box-description {
     font-size: 15px;
   }
 
 
-  .custom-box-image {
-    min-height: 430px;
+  /* =======================================================
+     MOBILE IMAGE
+  ======================================================== */
 
-    border-radius: 22px;
+  .custom-box-image {
+    width: 82%;
+
+    margin: 0 auto;
   }
 
+  .custom-box-image-real {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+  }
+
+
+  /* =======================================================
+     MOBILE IMAGE CONTENT
+  ======================================================== */
 
   .custom-box-image-content {
     padding:
@@ -946,16 +1022,27 @@
       20px;
   }
 
-
   .custom-box-image-content h2 {
     font-size: 28px;
   }
 
+  .custom-box-image-content p {
+    font-size: 15px;
+  }
+
+
+  /* =======================================================
+     MOBILE CONTENT
+  ======================================================== */
 
   .custom-box-content-title {
     font-size: 30px;
   }
 
+
+  /* =======================================================
+     MOBILE ITEMS
+  ======================================================== */
 
   .custom-box-items {
     grid-template-columns: 1fr;
@@ -963,11 +1050,14 @@
     gap: 15px;
   }
 
-
   .custom-box-item {
     padding: 15px;
   }
 
+
+  /* =======================================================
+     MOBILE BOTTOM
+  ======================================================== */
 
   .custom-box-bottom {
     gap: 10px;
@@ -975,14 +1065,13 @@
     margin-top: 50px;
   }
 
-
   .custom-box-bottom p {
     font-size: 14px;
   }
 
 
   /* =======================================================
-     MOBILE BACK
+     MOBILE BACK BUTTON
   ======================================================== */
 
   .custom-box-back {
@@ -996,7 +1085,6 @@
 
     font-size: 14px !important;
   }
-
 
   .custom-box-back svg {
     width: 18px !important;
@@ -1024,19 +1112,16 @@
       translateX(-50%) !important;
   }
 
-
   .custom-box-top-button:hover {
     transform:
       translateX(-50%)
       translateY(-3px) !important;
   }
 
-
   .custom-box-top-button svg {
     width: 20px !important;
     height: 20px !important;
   }
-
 }
 
 
@@ -1045,6 +1130,10 @@
 ========================================================= */
 
 @media (max-width: 400px) {
+
+  .custom-box-image {
+    width: 85%;
+  }
 
   .custom-box-top-button {
     position: absolute !important;
@@ -1062,11 +1151,9 @@
       translateX(-50%) !important;
   }
 
-
   .custom-box-top-button svg {
     width: 19px !important;
     height: 19px !important;
   }
-
 }
 

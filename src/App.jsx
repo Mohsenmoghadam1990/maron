@@ -1,3 +1,4 @@
+
 import "./App.css";
 
 import {
@@ -29,13 +30,11 @@ import heroImage from "./assets/product-1.jpg";
 function HomePage() {
   return (
     <div className="site" id="home">
-
       {/* =====================================================
           HERO
       ===================================================== */}
 
       <section className="hero-area">
-
         {/* =================================================
             HERO IMAGE
         ================================================= */}
@@ -67,7 +66,6 @@ function HomePage() {
         ================================================= */}
 
         <HeartBanner />
-
       </section>
 
       {/* =====================================================
@@ -83,7 +81,6 @@ function HomePage() {
       <About />
 
       <Cooperation />
-
     </div>
   );
 }
@@ -107,7 +104,6 @@ function FirstPeriodPage() {
 function CareSelectionPage() {
   return (
     <div className="custom-selection-page">
-
       <div className="custom-selection-container">
 
         <div className="custom-selection-icon">
@@ -134,7 +130,6 @@ function CareSelectionPage() {
         </Link>
 
       </div>
-
     </div>
   );
 }
@@ -146,7 +141,6 @@ function CareSelectionPage() {
 function StyleSelectionPage() {
   return (
     <div className="custom-selection-page">
-
       <div className="custom-selection-container">
 
         <div className="custom-selection-icon">
@@ -173,7 +167,6 @@ function StyleSelectionPage() {
         </Link>
 
       </div>
-
     </div>
   );
 }
@@ -185,7 +178,6 @@ function StyleSelectionPage() {
 function App() {
   return (
     <HashRouter>
-
       <Routes>
 
         {/* =================================================
@@ -252,7 +244,6 @@ function App() {
         />
 
       </Routes>
-
     </HashRouter>
   );
 }
