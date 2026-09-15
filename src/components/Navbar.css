@@ -1,3 +1,4 @@
+
 /* =========================================================
    NAVBAR
 ========================================================= */
@@ -25,11 +26,13 @@
   box-shadow: none !important;
 
   z-index: 1000 !important;
+
+  box-sizing: border-box !important;
 }
 
 
 /* =========================================================
-   BRAND - LEFT
+   BRAND
 ========================================================= */
 
 .navbar-brand {
@@ -39,38 +42,46 @@
 
   display: flex !important;
 
-  flex-direction: column !important;
+  flex-direction: row !important;
 
-  align-items: flex-start !important;
+  align-items: center !important;
   justify-content: flex-start !important;
+
+  gap: 9px !important;
 
   width: auto !important;
 
   margin: 0 !important;
   padding: 0 !important;
 
-  flex-shrink: 0 !important;
-
   direction: rtl !important;
+
+  flex-shrink: 0 !important;
 
   z-index: 1001 !important;
 }
 
 
 /* =========================================================
-   BRAND TEXT
-   کهن تجارت رایکا
+   MARON LOGO
+   لوگوی اصلی
 ========================================================= */
 
 .navbar-logo {
-  display: block !important;
+  position: relative !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
 
   width: auto !important;
 
   margin: 0 !important;
-  padding: 0 !important;
 
-  color: #392b40 !important;
+  padding: 7px 8px 14px !important;
+
+  color: #604568 !important;
 
   font-family:
     "Vazirmatn",
@@ -79,46 +90,177 @@
     Arial,
     sans-serif !important;
 
-  /*
-    کمی کوچک‌تر و ظریف‌تر
-  */
-  font-size: 21px !important;
+  font-size: 27px !important;
 
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 
-  line-height: 1.6 !important;
+  line-height: 1 !important;
 
-  letter-spacing: -0.3px !important;
-
-  text-decoration: none !important;
+  letter-spacing: -0.7px !important;
 
   white-space: nowrap !important;
 
   direction: rtl !important;
 
+  text-decoration: none !important;
+
   background: transparent !important;
 
   border: none !important;
 
+  outline: none !important;
+
   cursor: pointer !important;
 
+  transform: rotate(-1.5deg) !important;
+
   text-shadow:
-    0 1px 2px rgba(255, 255, 255, 0.75) !important;
+    0 2px 8px rgba(96, 69, 104, 0.10) !important;
 
   transition:
-    color 0.25s ease,
-    transform 0.25s ease !important;
+    transform 0.35s ease,
+    color 0.35s ease,
+    text-shadow 0.35s ease !important;
 }
 
 
 /* =========================================================
-   BRAND HOVER
+   MARON TEXT
+========================================================= */
+
+.navbar-logo-main {
+  position: relative !important;
+
+  display: inline-block !important;
+
+  color: inherit !important;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size: inherit !important;
+
+  font-weight: 500 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: inherit !important;
+
+  white-space: nowrap !important;
+
+  transform:
+    skewX(-5deg)
+    rotate(0.5deg) !important;
+}
+
+
+/* =========================================================
+   DECORATIVE UNDERLINE
+   خط دست‌کشیده زیر مارون
+========================================================= */
+
+.navbar-logo-main::before {
+  content: "" !important;
+
+  position: absolute !important;
+
+  right: -4px !important;
+  left: -2px !important;
+
+  bottom: -8px !important;
+
+  height: 5px !important;
+
+  border-bottom:
+    2px solid rgba(190, 137, 177, 0.65) !important;
+
+  border-radius:
+    0 0 55% 45% !important;
+
+  transform:
+    rotate(-2deg)
+    skewX(-18deg) !important;
+
+  opacity: 0.85 !important;
+}
+
+
+/* =========================================================
+   SECONDARY SHORT STROKE
+========================================================= */
+
+.navbar-logo-main::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  width: 15px !important;
+  height: 5px !important;
+
+  left: 3px !important;
+
+  bottom: -11px !important;
+
+  border-bottom:
+    2px solid rgba(214, 155, 200, 0.75) !important;
+
+  border-radius: 50% !important;
+
+  transform:
+    rotate(7deg) !important;
+
+  opacity: 0.8 !important;
+}
+
+
+/* =========================================================
+   SMALL DECORATIVE DOT
+   نقطه ظریف کنار لوگو
+========================================================= */
+
+.navbar-logo::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  width: 6px !important;
+  height: 6px !important;
+
+  left: -1px !important;
+  top: 9px !important;
+
+  border-radius: 50% !important;
+
+  background:
+    #d39abd !important;
+
+  box-shadow:
+    0 0 0 3px rgba(211, 154, 189, 0.10) !important;
+
+  transform:
+    rotate(12deg) !important;
+
+  opacity: 0.85 !important;
+}
+
+
+/* =========================================================
+   LOGO HOVER
 ========================================================= */
 
 .navbar-logo:hover {
-  color: #765584 !important;
+  color: #805b82 !important;
 
-  transform: translateY(-1px) !important;
+  transform:
+    rotate(-2deg)
+    translateY(-2px) !important;
+
+  text-shadow:
+    0 5px 13px rgba(128, 91, 130, 0.15) !important;
 }
 
 
@@ -130,7 +272,7 @@
   width: 42px !important;
   height: 42px !important;
 
-  margin: 8px 0 0 !important;
+  margin: 0 !important;
   padding: 0 !important;
 
   display: flex !important;
@@ -138,11 +280,13 @@
   align-items: center !important;
   justify-content: center !important;
 
-  border: 1px solid rgba(118, 85, 132, 0.22) !important;
+  border:
+    1px solid rgba(118, 85, 132, 0.22) !important;
 
   border-radius: 50% !important;
 
-  background: rgba(255, 255, 255, 0.72) !important;
+  background:
+    rgba(255, 255, 255, 0.72) !important;
 
   color: #765584 !important;
 
@@ -162,7 +306,8 @@
   transition:
     transform 0.25s ease,
     background 0.25s ease,
-    box-shadow 0.25s ease !important;
+    box-shadow 0.25s ease,
+    color 0.25s ease !important;
 }
 
 
@@ -177,17 +322,24 @@
   padding: 0 !important;
 
   line-height: 1 !important;
+
+  transform:
+    translateY(-1px) !important;
 }
 
 
 /* =========================================================
-   MUSIC BUTTON HOVER
+   MUSIC HOVER
 ========================================================= */
 
 .navbar-music-button:hover {
-  background: rgba(255, 255, 255, 0.92) !important;
+  background:
+    rgba(255, 255, 255, 0.92) !important;
 
-  transform: translateY(-2px) !important;
+  color: #684d7d !important;
+
+  transform:
+    translateY(-2px) !important;
 
   box-shadow:
     0 6px 18px rgba(80, 55, 90, 0.13) !important;
@@ -201,14 +353,16 @@
 .navbar-music-button.playing {
   color: #684d7d !important;
 
-  border-color: rgba(104, 77, 125, 0.35) !important;
+  border-color:
+    rgba(104, 77, 125, 0.35) !important;
 
-  background: rgba(255, 255, 255, 0.88) !important;
+  background:
+    rgba(255, 255, 255, 0.88) !important;
 }
 
 
 /* =========================================================
-   MENU - RIGHT
+   MENU
 ========================================================= */
 
 .navbar-menu {
@@ -239,6 +393,8 @@
   flex-wrap: nowrap !important;
 
   z-index: 1001 !important;
+
+  box-sizing: border-box !important;
 }
 
 
@@ -258,6 +414,8 @@
   padding: 0 !important;
 
   list-style: none !important;
+
+  flex-shrink: 0 !important;
 }
 
 
@@ -311,7 +469,8 @@
 .navbar-menu li a:hover {
   color: #765584 !important;
 
-  transform: translateY(-1px) !important;
+  transform:
+    translateY(-1px) !important;
 }
 
 
@@ -362,18 +521,27 @@
 
 
 /* =========================================================
-   MOBILE - 850px
+   TABLET
 ========================================================= */
 
 @media (max-width: 850px) {
 
   .navbar {
     min-height: 60px !important;
+
+    padding:
+      0 4px !important;
+  }
+
+  .navbar-brand {
+    gap: 7px !important;
   }
 
   .navbar-logo {
-    font-size: 18px !important;
-    font-weight: 600 !important;
+    font-size: 21px !important;
+
+    padding:
+      5px 5px 11px !important;
   }
 
   .navbar-menu {
@@ -388,26 +556,41 @@
     width: 38px !important;
     height: 38px !important;
 
-    margin-top: 6px !important;
-
     font-size: 19px !important;
   }
 }
 
 
 /* =========================================================
-   SMALL MOBILE - 600px
+   MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
 
   .navbar {
-    align-items: flex-start !important;
+    min-height: 55px !important;
+
+    padding:
+      0 3px !important;
+  }
+
+  .navbar-brand {
+    gap: 5px !important;
   }
 
   .navbar-logo {
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 18px !important;
+
+    padding:
+      4px 4px 10px !important;
+  }
+
+  .navbar-logo::after {
+    width: 5px !important;
+    height: 5px !important;
+
+    left: 0 !important;
+    top: 8px !important;
   }
 
   .navbar-menu {
@@ -427,7 +610,8 @@
   .navbar-menu li a {
     font-size: 12px !important;
 
-    padding: 6px 0 !important;
+    padding:
+      6px 0 !important;
   }
 
   .navbar-music-button {
@@ -440,10 +624,18 @@
 
 
 /* =========================================================
-   VERY SMALL MOBILE - 450px
+   VERY SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 450px) {
+
+  .navbar {
+    min-height: 52px !important;
+  }
+
+  .navbar-brand {
+    gap: 4px !important;
+  }
 
   .navbar-menu {
     gap: 9px !important;
@@ -454,9 +646,20 @@
   }
 
   .navbar-logo {
-    font-size: 15px !important;
-    font-weight: 600 !important;
+    font-size: 16px !important;
 
-    letter-spacing: -0.2px !important;
+    font-weight: 500 !important;
+
+    letter-spacing: -0.4px !important;
+
+    padding:
+      4px 3px 9px !important;
+  }
+
+  .navbar-music-button {
+    width: 32px !important;
+    height: 32px !important;
+
+    font-size: 16px !important;
   }
 }

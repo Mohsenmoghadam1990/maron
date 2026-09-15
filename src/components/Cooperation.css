@@ -1,18 +1,21 @@
+ 
 /* =========================================================
    COOPERATION / CONTACT SECTION
 ========================================================= */
 
 .cooperation-section {
+
   position: relative;
 
   width: 100%;
-  min-height: 560px;
+
+  min-height: 540px;
+
+  padding: 90px 20px 80px;
+
+  box-sizing: border-box;
 
   overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   direction: rtl;
 
@@ -23,117 +26,61 @@
     Arial,
     sans-serif;
 
-  background:
-    radial-gradient(
-      circle at 12% 18%,
-      rgba(238, 181, 207, 0.55) 0,
-      rgba(238, 181, 207, 0.16) 18%,
-      transparent 38%
-    ),
-    radial-gradient(
-      circle at 88% 22%,
-      rgba(184, 211, 235, 0.62) 0,
-      rgba(184, 211, 235, 0.16) 20%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 75% 88%,
-      rgba(244, 188, 151, 0.28) 0,
-      transparent 32%
-    ),
-    linear-gradient(
-      135deg,
-      #f8f1f7 0%,
-      #f5edf5 30%,
-      #edf2f6 66%,
-      #faf1ed 100%
-    );
 }
 
 
 /* =========================================================
-   SOFT LIGHT
-========================================================= */
-
-.cooperation-section::before {
-  content: "";
-
-  position: absolute;
-
-  inset: -20%;
-
-  z-index: 0;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(255, 255, 255, 0.96) 0%,
-      rgba(255, 255, 255, 0.62) 27%,
-      rgba(255, 255, 255, 0.08) 58%,
-      transparent 73%
-    );
-
-  filter: blur(8px);
-}
-
-
-/* =========================================================
-   LEFT DECORATIVE GLOW
-========================================================= */
-
-.cooperation-section::after {
-  content: "";
-
-  position: absolute;
-
-  width: 520px;
-  height: 520px;
-
-  left: -180px;
-  bottom: -250px;
-
-  z-index: 0;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(221, 159, 191, 0.28) 0%,
-      rgba(221, 159, 191, 0.1) 48%,
-      transparent 72%
-    );
-
-  filter: blur(10px);
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   DECORATIVE BACKGROUND
+   BACKGROUND
+   صورتی + آبی ترکیبی
 ========================================================= */
 
 .cooperation-bg {
+
   position: absolute;
 
   inset: 0;
 
-  z-index: 1;
+  z-index: 0;
 
-  pointer-events: none;
+  background:
 
-  overflow: hidden;
+    radial-gradient(
+      circle at 18% 25%,
+      rgba(244, 174, 211, 0.48) 0%,
+      rgba(244, 174, 211, 0.18) 25%,
+      transparent 52%
+    ),
+
+    radial-gradient(
+      circle at 82% 28%,
+      rgba(164, 204, 240, 0.50) 0%,
+      rgba(164, 204, 240, 0.18) 28%,
+      transparent 55%
+    ),
+
+    radial-gradient(
+      circle at 50% 92%,
+      rgba(191, 177, 230, 0.34) 0%,
+      transparent 50%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f8e8f2 0%,
+      #f4eaf5 28%,
+      #edf0f8 58%,
+      #e4f1f7 100%
+    );
+
 }
 
 
 /* =========================================================
-   LARGE CIRCLE
+   SOFT PINK LIGHT
 ========================================================= */
 
 .cooperation-bg::before {
+
   content: "";
 
   position: absolute;
@@ -146,47 +93,45 @@
 
   border-radius: 50%;
 
-  border:
-    1px solid rgba(148, 107, 139, 0.16);
+  background:
+    radial-gradient(
+      circle,
+      rgba(247, 181, 216, 0.42),
+      transparent 70%
+    );
 
-  box-shadow:
-    0 0 0 35px rgba(255, 255, 255, 0.18),
-    0 0 0 70px rgba(255, 255, 255, 0.1);
+  filter: blur(20px);
 
-  transform: rotate(18deg);
 }
 
 
 /* =========================================================
-   SOFT SHAPE
+   SOFT BLUE LIGHT
 ========================================================= */
 
 .cooperation-bg::after {
+
   content: "";
 
   position: absolute;
 
-  width: 230px;
-  height: 230px;
+  width: 390px;
+  height: 390px;
 
-  left: -70px;
-  top: 85px;
+  bottom: -190px;
+  left: -100px;
 
-  border-radius:
-    48% 52% 65% 35% /
-    42% 35% 65% 58%;
+  border-radius: 50%;
 
   background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.55),
-      rgba(235, 194, 213, 0.17)
+    radial-gradient(
+      circle,
+      rgba(154, 205, 239, 0.38),
+      transparent 70%
     );
 
-  border:
-    1px solid rgba(255, 255, 255, 0.55);
+  filter: blur(25px);
 
-  transform: rotate(-25deg);
 }
 
 
@@ -195,20 +140,25 @@
 ========================================================= */
 
 .cooperation-content {
+
   position: relative;
 
-  z-index: 5;
+  z-index: 2;
 
-  width: min(760px, calc(100% - 40px));
+  width: 100%;
 
-  padding: 90px 0 80px;
+  max-width: 850px;
+
+  margin: 0 auto;
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
 
   text-align: center;
+
 }
 
 
@@ -217,97 +167,84 @@
 ========================================================= */
 
 .cooperation-eyebrow {
-  display: inline-flex;
 
-  align-items: center;
+  display: inline-block;
 
-  gap: 14px;
+  margin-bottom: 8px;
 
-  margin-bottom: 12px;
+  font-size: 14px;
 
-  color: #8d6c88;
+  font-weight: 500;
 
-  font-size: 13px;
-
-  font-weight: 600;
-
-  line-height: 1.8;
+  color: #80658f;
 
   letter-spacing: 0.2px;
+
+  opacity: 0.9;
+
 }
 
 
 /* =========================================================
-   EYEBROW LINES
+   TITLE
 ========================================================= */
 
-.cooperation-eyebrow::before,
-.cooperation-eyebrow::after {
+.cooperation-title {
+
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  padding: 0 8px 12px;
+
+  color: #493553;
+
+  font-size: clamp(30px, 4vw, 42px);
+
+  line-height: 1.6;
+
+  font-weight: 500;
+
+  letter-spacing: -0.8px;
+
+  transform: rotate(-0.5deg);
+
+}
+
+
+/* =========================================================
+   TITLE UNDERLINE
+========================================================= */
+
+.cooperation-title::after {
+
   content: "";
 
-  width: 38px;
-  height: 1px;
+  position: absolute;
 
-  display: block;
+  left: 14%;
+
+  right: 14%;
+
+  bottom: 1px;
+
+  height: 2px;
+
+  border-radius: 50%;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(142, 104, 138, 0.55)
+      rgba(161, 112, 171, 0.55),
+      rgba(114, 153, 190, 0.45),
+      transparent
     );
-}
 
-.cooperation-eyebrow::after {
-  transform: rotate(180deg);
-}
+  transform: rotate(-1deg);
 
-
-/* =========================================================
-   MAIN TITLE
-========================================================= */
-
-.cooperation-title {
-  margin: 0;
-
-  color: #342536;
-
-  font-size: clamp(38px, 5.2vw, 55px);
-
-  font-weight: 750;
-
-  line-height: 1.45;
-
-  letter-spacing: -1px;
-
-  text-shadow:
-    0 2px 18px rgba(255, 255, 255, 0.7);
-}
-
-
-/* =========================================================
-   TITLE LINE
-========================================================= */
-
-.cooperation-title::after {
-  content: "";
-
-  display: block;
-
-  width: 54px;
-  height: 3px;
-
-  margin: 14px auto 0;
-
-  border-radius: 20px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #d99ab9,
-      #aa8ab5,
-      #9dbfd2
-    );
 }
 
 
@@ -316,34 +253,36 @@
 ========================================================= */
 
 .cooperation-text {
-  margin: 20px 0 38px;
 
-  color: #766b77;
+  margin: 13px 0 0;
 
-  font-size: 14px;
+  color: #766d7d;
+
+  font-size: 15px;
+
+  line-height: 2.1;
 
   font-weight: 400;
 
-  line-height: 2.35;
-
-  letter-spacing: 0;
 }
 
 
 /* =========================================================
-   PHONE CONTAINER
+   PHONE
 ========================================================= */
 
 .cooperation-phone {
-  position: relative;
 
-  min-width: 240px;
-  min-height: 125px;
+  min-height: 72px;
+
+  margin-top: 18px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
+
 }
 
 
@@ -352,427 +291,573 @@
 ========================================================= */
 
 .phone-icon-button {
+
   position: relative;
 
-  width: 150px;
-  height: 125px;
+  width: 62px;
+
+  height: 62px;
 
   padding: 0;
 
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 9px;
-
   border: none;
-
-  outline: none;
 
   background: transparent;
 
   cursor: pointer;
 
-  font-family: inherit;
+  display: flex;
 
-  transition:
-    transform 0.35s ease;
+  align-items: center;
+
+  justify-content: center;
+
 }
 
 
 /* =========================================================
-   PHONE ICON CIRCLE
+   PHONE CIRCLE
 ========================================================= */
 
 .phone-icon-circle {
-  width: 67px;
-  height: 67px;
+
+  width: 56px;
+
+  height: 56px;
+
+  border-radius: 50%;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  border-radius: 50%;
+  color: #8a6598;
 
-  color: #765478;
+  background: rgba(255, 255, 255, 0.66);
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.88),
-      rgba(244, 222, 235, 0.7)
-    );
-
-  border:
-    1px solid rgba(151, 113, 148, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 
   box-shadow:
-    0 12px 30px rgba(112, 77, 108, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 8px 24px rgba(102, 76, 125, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(8px);
 
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background 0.35s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
 }
 
-
-/* =========================================================
-   PHONE SVG
-========================================================= */
 
 .phone-icon-circle svg {
-  width: 25px;
-  height: 25px;
 
-  stroke-width: 1.65;
+  width: 24px;
+
+  height: 24px;
+
+  stroke-width: 1.7;
+
 }
 
 
 /* =========================================================
-   PHONE HOVER
+   PHONE BUTTON HOVER
 ========================================================= */
-
-.phone-icon-button:hover {
-  transform: translateY(-5px);
-}
 
 .phone-icon-button:hover .phone-icon-circle {
+
   transform: scale(1.08);
 
-  background:
-    linear-gradient(
-      145deg,
-      #fff,
-      #f0dce9
-    );
-
   box-shadow:
-    0 17px 36px rgba(112, 77, 108, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
+    0 12px 28px rgba(102, 76, 125, 0.20);
+
 }
 
 
 /* =========================================================
-   PHONE TEXT
-========================================================= */
-
-.phone-icon-text {
-  color: #6f596e;
-
-  font-size: 12px;
-
-  font-weight: 600;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   SMALL ARROW
+   PHONE ARROW
 ========================================================= */
 
 .phone-arrow {
+
   position: absolute;
 
-  bottom: 2px;
+  bottom: -3px;
 
-  color: #aa91a7;
+  right: 1px;
 
-  animation:
-    phoneArrowMove 1.8s ease-in-out infinite;
+  width: 20px;
+
+  height: 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.86);
+
+  color: #856793;
+
+  box-shadow:
+    0 3px 10px rgba(95, 68, 116, 0.12);
+
 }
+
 
 .phone-arrow svg {
-  width: 14px;
-  height: 14px;
 
-  stroke-width: 1.5;
+  width: 13px;
+
+  height: 13px;
+
 }
 
 
 /* =========================================================
-   ARROW ANIMATION
-========================================================= */
-
-@keyframes phoneArrowMove {
-
-  0%,
-  100% {
-    transform: translateY(0);
-
-    opacity: 0.45;
-  }
-
-  50% {
-    transform: translateY(4px);
-
-    opacity: 0.9;
-  }
-}
-
-
-/* =========================================================
-   REVEALED PHONE
+   REVEALED PHONE NUMBERS
 ========================================================= */
 
 .phone-revealed {
-  min-width: 280px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  animation: phoneReveal 0.45s ease both;
+
+}
+
+
+.phone-number-visible {
+
+  direction: ltr;
+
+  text-decoration: none;
+
+  color: #654b73;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.48);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+
+}
+
+
+.phone-number-visible:hover {
+
+  background: rgba(255, 255, 255, 0.82);
+
+  transform: translateY(-2px);
+
+}
+
+
+@keyframes phoneReveal {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   ROTATING CONTACT ORBIT
+========================================================= */
+
+.cooperation-orbit {
+
+  position: relative;
+
+  width: 154px;
+
+  height: 154px;
+
+  margin: 20px auto 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+/* =========================================================
+   ROTATING RING
+========================================================= */
+
+.orbit-ring {
+
+  position: relative;
+
+  width: 154px;
+
+  height: 154px;
+
+  border-radius: 50%;
+
+  animation:
+    orbitRotate 14s linear infinite;
+
+}
+
+
+/* =========================================================
+   ORBIT LINE
+========================================================= */
+
+.orbit-ring::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 10px;
+
+  border: 1px dashed rgba(123, 96, 146, 0.20);
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   SOCIAL ICON
+========================================================= */
+
+.orbit-social {
+
+  position: absolute;
+
+  width: 52px;
+
+  height: 52px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  border: 1px solid rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 8px 22px rgba(91, 65, 115, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(9px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+}
+
+
+/* =========================================================
+   REAL ICON SIZE
+========================================================= */
+
+.orbit-social svg {
+
+  width: 24px;
+
+  height: 24px;
+
+}
+
+
+/* =========================================================
+   INSTAGRAM POSITION
+========================================================= */
+
+.orbit-instagram {
+
+  top: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #c13584;
+
+}
+
+
+/* =========================================================
+   WHATSAPP POSITION
+========================================================= */
+
+.orbit-whatsapp {
+
+  right: 0;
+
+  bottom: 5px;
+
+  color: #25d366;
+
+}
+
+
+/* =========================================================
+   TELEGRAM POSITION
+========================================================= */
+
+.orbit-telegram {
+
+  left: 0;
+
+  bottom: 5px;
+
+  color: #229ed9;
+
+}
+
+
+/* =========================================================
+   KEEP ICONS STRAIGHT
+========================================================= */
+
+.orbit-social svg {
+
+  animation:
+    orbitCounterRotate 14s linear infinite;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.orbit-social:hover {
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 12px 30px rgba(91, 65, 115, 0.20);
+
+  transform: scale(1.10);
+
+}
+
+
+/* =========================================================
+   PAUSE ON HOVER
+========================================================= */
+
+.cooperation-orbit:hover .orbit-ring {
+
+  animation-play-state: paused;
+
+}
+
+.cooperation-orbit:hover .orbit-social svg {
+
+  animation-play-state: paused;
+
+}
+
+
+/* =========================================================
+   ORBIT ANIMATION
+========================================================= */
+
+@keyframes orbitRotate {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   COUNTER ROTATION
+========================================================= */
+
+@keyframes orbitCounterRotate {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(-360deg);
+
+  }
+
+}
+
+
+/* =========================================================
+   SALES REPRESENTATIVE
+========================================================= */
+
+.cooperation-representative {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 250px;
+
+  padding: 13px 20px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 8px 25px rgba(89, 69, 110, 0.08);
+
+  backdrop-filter: blur(8px);
+
+}
+
+
+/* =========================================================
+   REPRESENTATIVE ICON
+========================================================= */
+
+.representative-icon {
+
+  width: 39px;
+
+  height: 39px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #80638f;
+
+  background: rgba(255, 255, 255, 0.62);
+
+}
+
+
+.representative-icon svg {
+
+  width: 19px;
+
+  height: 19px;
+
+  stroke-width: 1.6;
+
+}
+
+
+/* =========================================================
+   REPRESENTATIVE INFO
+========================================================= */
+
+.representative-info {
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: center;
+  align-items: flex-start;
 
-  justify-content: center;
+  text-align: right;
 
-  gap: 10px;
+  line-height: 1.7;
 
-  animation:
-    phoneReveal 0.5s ease forwards;
 }
 
 
-/* =========================================================
-   PHONE REVEAL ANIMATION
-========================================================= */
+.representative-label {
 
-@keyframes phoneReveal {
+  font-size: 12px;
 
-  from {
-    opacity: 0;
+  color: #8b7c91;
 
-    transform:
-      translateY(12px)
-      scale(0.94);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-  }
 }
 
 
-/* =========================================================
-   REVEALED LABEL
-========================================================= */
+.representative-name {
 
-.phone-revealed-label {
-  color: #947c91;
+  font-size: 15px;
 
-  font-size: 11px;
+  font-weight: 600;
 
-  font-weight: 500;
+  color: #5c4569;
 
-  line-height: 1.8;
 }
 
 
-/* =========================================================
-   PHONE NUMBER
-========================================================= */
+.representative-provinces {
 
-.phone-number-visible {
-  position: relative;
+  font-size: 12px;
 
-  display: inline-block;
+  color: #817584;
 
-  padding: 8px 16px;
-
-  color: #49354c;
-
-  font-size: 23px;
-
-  font-weight: 650;
-
-  letter-spacing: 1.2px;
-
-  line-height: 1.6;
-
-  text-decoration: none;
-
-  border-bottom:
-    1px solid rgba(112, 79, 110, 0.25);
-
-  transition:
-    color 0.25s ease,
-    transform 0.25s ease,
-    border-color 0.25s ease;
-}
-
-
-/* =========================================================
-   PHONE NUMBER HOVER
-========================================================= */
-
-.phone-number-visible:hover {
-  color: #895e82;
-
-  transform: translateY(-2px);
-
-  border-color:
-    rgba(137, 94, 130, 0.55);
-}
-
-
-/* =========================================================
-   BRAND
-========================================================= */
-
-.cooperation-brand {
-  position: relative;
-
-  margin-top: 34px;
-
-  color: #70506f;
-
-  font-size: 18px;
-
-  font-weight: 750;
-
-  line-height: 1.8;
-
-  letter-spacing: -0.2px;
-}
-
-
-/* =========================================================
-   BRAND DECORATION
-========================================================= */
-
-.cooperation-brand::before,
-.cooperation-brand::after {
-  content: "✦";
-
-  position: absolute;
-
-  top: 2px;
-
-  color: #c996b4;
-
-  font-size: 11px;
-
-  opacity: 0.75;
-}
-
-.cooperation-brand::before {
-  right: -27px;
-}
-
-.cooperation-brand::after {
-  left: -27px;
-
-  color: #9bb8cc;
-}
-
-
-/* =========================================================
-   FLOATING PETALS
-========================================================= */
-
-.cooperation-content::before {
-  content: "";
-
-  position: absolute;
-
-  width: 14px;
-  height: 22px;
-
-  top: 100px;
-  left: 18%;
-
-  border-radius:
-    80% 20% 80% 20%;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(218, 151, 185, 0.65),
-      rgba(241, 191, 211, 0.2)
-    );
-
-  transform: rotate(35deg);
-
-  opacity: 0.65;
-
-  animation:
-    cooperationPetalFloat 5s ease-in-out infinite;
-}
-
-
-.cooperation-content::after {
-  content: "";
-
-  position: absolute;
-
-  width: 11px;
-  height: 18px;
-
-  right: 18%;
-  bottom: 120px;
-
-  border-radius:
-    20% 80% 20% 80%;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(164, 193, 211, 0.7),
-      rgba(220, 230, 238, 0.25)
-    );
-
-  transform: rotate(-35deg);
-
-  opacity: 0.65;
-
-  animation:
-    cooperationPetalFloatReverse 6s ease-in-out infinite;
-}
-
-
-/* =========================================================
-   PETAL ANIMATIONS
-========================================================= */
-
-@keyframes cooperationPetalFloat {
-
-  0%,
-  100% {
-    transform:
-      translate3d(0, 0, 0)
-      rotate(35deg);
-  }
-
-  50% {
-    transform:
-      translate3d(12px, -18px, 0)
-      rotate(55deg);
-  }
-}
-
-
-@keyframes cooperationPetalFloatReverse {
-
-  0%,
-  100% {
-    transform:
-      translate3d(0, 0, 0)
-      rotate(-35deg);
-  }
-
-  50% {
-    transform:
-      translate3d(-14px, 15px, 0)
-      rotate(-55deg);
-  }
 }
 
 
@@ -780,21 +865,23 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
   .cooperation-section {
-    min-height: 500px;
+
+    min-height: 520px;
+
+    padding-top: 75px;
+
   }
 
-  .cooperation-content {
-    width: calc(100% - 40px);
-
-    padding: 78px 0 68px;
-  }
 
   .cooperation-title {
-    font-size: 43px;
+
+    font-size: 34px;
+
   }
+
 }
 
 
@@ -805,86 +892,107 @@
 @media (max-width: 600px) {
 
   .cooperation-section {
-    min-height: 465px;
+
+    min-height: 500px;
+
+    padding: 65px 16px 65px;
+
   }
 
-  .cooperation-content {
-    width: calc(100% - 30px);
-
-    padding: 65px 0 55px;
-  }
 
   .cooperation-eyebrow {
-    gap: 9px;
 
-    font-size: 11px;
+    font-size: 13px;
+
   }
 
-  .cooperation-eyebrow::before,
-  .cooperation-eyebrow::after {
-    width: 25px;
-  }
 
   .cooperation-title {
-    font-size: 34px;
 
-    letter-spacing: -0.5px;
+    font-size: 30px;
+
+    padding-bottom: 10px;
+
   }
 
-  .cooperation-title::after {
-    width: 45px;
-
-    margin-top: 11px;
-  }
 
   .cooperation-text {
-    margin:
-      15px 0
-      30px;
 
-    font-size: 12px;
+    font-size: 13px;
 
-    line-height: 2.15;
+    line-height: 2;
+
   }
 
-  .phone-icon-button {
-    width: 140px;
-    height: 120px;
-  }
-
-  .phone-icon-circle {
-    width: 61px;
-    height: 61px;
-  }
-
-  .phone-icon-circle svg {
-    width: 23px;
-    height: 23px;
-  }
-
-  .phone-number-visible {
-    font-size: 19px;
-
-    letter-spacing: 0.8px;
-  }
 
   .phone-revealed {
-    min-width: 250px;
+
+    flex-direction: column;
+
+    gap: 6px;
+
   }
 
-  .cooperation-brand {
-    margin-top: 29px;
 
-    font-size: 15px;
+  .phone-number-visible {
+
+    font-size: 14px;
+
   }
 
-  .cooperation-brand::before {
-    right: -22px;
+
+  .cooperation-orbit {
+
+    width: 138px;
+
+    height: 138px;
+
+    margin-top: 17px;
+
+    margin-bottom: 25px;
+
   }
 
-  .cooperation-brand::after {
-    left: -22px;
+
+  .orbit-ring {
+
+    width: 138px;
+
+    height: 138px;
+
   }
+
+
+  .orbit-social {
+
+    width: 47px;
+
+    height: 47px;
+
+  }
+
+
+  .orbit-social svg {
+
+    width: 21px;
+
+    height: 21px;
+
+  }
+
+
+  .cooperation-representative {
+
+    min-width: auto;
+
+    width: auto;
+
+    max-width: 90%;
+
+    padding: 11px 17px;
+
+  }
+
 }
 
 
@@ -894,20 +1002,69 @@
 
 @media (max-width: 400px) {
 
-  .cooperation-title {
-    font-size: 30px;
+  .cooperation-section {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+
   }
+
+
+  .cooperation-title {
+
+    font-size: 27px;
+
+  }
+
 
   .cooperation-text {
-    font-size: 11px;
+
+    font-size: 12px;
+
   }
 
-  .phone-number-visible {
-    font-size: 17px;
+
+  .cooperation-orbit {
+
+    width: 128px;
+
+    height: 128px;
+
   }
 
-  .phone-icon-text {
+
+  .orbit-ring {
+
+    width: 128px;
+
+    height: 128px;
+
+  }
+
+
+  .orbit-social {
+
+    width: 44px;
+
+    height: 44px;
+
+  }
+
+
+  .orbit-social svg {
+
+    width: 20px;
+
+    height: 20px;
+
+  }
+
+
+  .representative-provinces {
+
     font-size: 11px;
+
   }
 
 }

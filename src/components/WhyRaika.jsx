@@ -58,7 +58,7 @@ function WhyRaika() {
         <div className="why-raika-heading">
 
           <span className="why-raika-small-title">
-            چرا رایکا؟
+            چرا مارون ؟
           </span>
 
 

@@ -9,6 +9,10 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  /* =========================================================
+     MUSIC STATE
+  ========================================================= */
+
   useEffect(() => {
     const updateMusicState = (event) => {
       if (typeof event.detail === "boolean") {
@@ -33,6 +37,10 @@ function Navbar() {
     };
   }, []);
 
+  /* =========================================================
+     MUSIC BUTTON
+  ========================================================= */
+
   const handleMusicClick = async (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -46,19 +54,16 @@ function Navbar() {
     }
   };
 
-  /*
-  =========================================================
-    SCROLL TO HOME SECTION
-  =========================================================
-  */
+  /* =========================================================
+     SCROLL TO HOME SECTION
+  ========================================================= */
 
   const handleSectionClick = (event, sectionId) => {
     event.preventDefault();
 
-    /*
-      اگر در صفحه اصلی هستیم،
-      فقط به همان بخش اسکرول می‌کنیم.
-    */
+    /* -------------------------------------------------------
+       اگر در صفحه اصلی هستیم
+    ------------------------------------------------------- */
 
     if (location.pathname === "/") {
       const section = document.getElementById(sectionId);
@@ -73,17 +78,11 @@ function Navbar() {
       return;
     }
 
-    /*
-      اگر در یکی از صفحات دیگر هستیم،
-      اول به صفحه اصلی می‌رویم.
-    */
+    /* -------------------------------------------------------
+       اگر در صفحه دیگری هستیم
+    ------------------------------------------------------- */
 
     navigate("/");
-
-    /*
-      بعد از برگشت به Home،
-      به بخش مورد نظر اسکرول می‌کنیم.
-    */
 
     setTimeout(() => {
       const section = document.getElementById(sectionId);
@@ -106,15 +105,26 @@ function Navbar() {
 
       <div className="navbar-brand">
 
+        {/* ===================================================
+            MARON LOGO
+        =================================================== */}
+
         <button
           type="button"
           className="navbar-logo"
           onClick={(event) =>
             handleSectionClick(event, "home")
           }
+          aria-label="مارون"
         >
-          کهن تجارت رایکا
+          <span className="navbar-logo-main">
+            مارون
+          </span>
         </button>
+
+        {/* ===================================================
+            MUSIC BUTTON
+        =================================================== */}
 
         <button
           type="button"
@@ -144,6 +154,7 @@ function Navbar() {
 
       <ul className="navbar-menu" dir="rtl">
 
+        {/* خانه */}
         <li>
           <a
             href="#home"
@@ -155,6 +166,7 @@ function Navbar() {
           </a>
         </li>
 
+        {/* محصولات */}
         <li>
           <a
             href="#products"
@@ -166,6 +178,7 @@ function Navbar() {
           </a>
         </li>
 
+        {/* مراقبت و آموزش */}
         <li>
           <a
             href="#education"
@@ -177,6 +190,7 @@ function Navbar() {
           </a>
         </li>
 
+        {/* درباره ما */}
         <li>
           <a
             href="#about"
@@ -188,6 +202,7 @@ function Navbar() {
           </a>
         </li>
 
+        {/* تماس با ما */}
         <li>
           <a
             href="#contact"
@@ -206,4 +221,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
