@@ -20,8 +20,10 @@ import ProductsBoxPage from "./components/ProductsBoxPage";
 import PeriodTracker from "./components/PeriodTracker";
 import HeartBanner from "./components/HeartBanner";
 import Cooperation from "./components/Cooperation";
+import HappyBaby from "./components/HappyBaby";
 
 import heroImage from "./assets/product-1.jpg";
+
 
 /* =========================================================
    HOME PAGE
@@ -30,24 +32,23 @@ import heroImage from "./assets/product-1.jpg";
 function HomePage() {
   return (
     <div className="site" id="home">
+
       {/* =====================================================
           HERO
       ===================================================== */}
 
       <section className="hero-area">
-        {/* =================================================
-            HERO IMAGE
-        ================================================= */}
+
+        {/* HERO IMAGE */}
 
         <img
           src={heroImage}
-          alt="Raika"
+          alt="Maroon"
           className="hero-image"
         />
 
-        {/* =================================================
-            NAVBAR OVER HERO
-        ================================================= */}
+
+        {/* NAVBAR OVER HERO */}
 
         <header className="header-area">
           <div className="top-navigation">
@@ -55,18 +56,18 @@ function HomePage() {
           </div>
         </header>
 
-        {/* =================================================
-            MUSIC
-        ================================================= */}
+
+        {/* MUSIC */}
 
         <MusicBar />
 
-        {/* =================================================
-            FLOATING HEARTS
-        ================================================= */}
+
+        {/* FLOATING HEARTS */}
 
         <HeartBanner />
+
       </section>
+
 
       {/* =====================================================
           HOME SECTIONS
@@ -81,9 +82,11 @@ function HomePage() {
       <About />
 
       <Cooperation />
+
     </div>
   );
 }
+
 
 /* =========================================================
    FIRST PERIOD PAGE
@@ -97,6 +100,7 @@ function FirstPeriodPage() {
   );
 }
 
+
 /* =========================================================
    CARE SELECTION PAGE
 ========================================================= */
@@ -104,6 +108,7 @@ function FirstPeriodPage() {
 function CareSelectionPage() {
   return (
     <div className="custom-selection-page">
+
       <div className="custom-selection-container">
 
         <div className="custom-selection-icon">
@@ -130,9 +135,11 @@ function CareSelectionPage() {
         </Link>
 
       </div>
+
     </div>
   );
 }
+
 
 /* =========================================================
    STYLE SELECTION PAGE
@@ -141,6 +148,7 @@ function CareSelectionPage() {
 function StyleSelectionPage() {
   return (
     <div className="custom-selection-page">
+
       <div className="custom-selection-container">
 
         <div className="custom-selection-icon">
@@ -167,9 +175,11 @@ function StyleSelectionPage() {
         </Link>
 
       </div>
+
     </div>
   );
 }
+
 
 /* =========================================================
    APP
@@ -178,6 +188,7 @@ function StyleSelectionPage() {
 function App() {
   return (
     <HashRouter>
+
       <Routes>
 
         {/* =================================================
@@ -189,6 +200,7 @@ function App() {
           element={<HomePage />}
         />
 
+
         {/* =================================================
             FIRST PERIOD
         ================================================= */}
@@ -197,6 +209,7 @@ function App() {
           path="/first-period"
           element={<FirstPeriodPage />}
         />
+
 
         {/* =================================================
             CUSTOM BOX
@@ -207,6 +220,7 @@ function App() {
           element={<CustomBox />}
         />
 
+
         {/* =================================================
             PERIOD TRACKER
         ================================================= */}
@@ -215,6 +229,7 @@ function App() {
           path="/period-tracker"
           element={<PeriodTracker />}
         />
+
 
         {/* =================================================
             CUSTOM BOX PRODUCTS
@@ -225,6 +240,7 @@ function App() {
           element={<ProductsBoxPage />}
         />
 
+
         {/* =================================================
             CUSTOM BOX CARE
         ================================================= */}
@@ -233,6 +249,7 @@ function App() {
           path="/custom-box/care"
           element={<CareSelectionPage />}
         />
+
 
         {/* =================================================
             CUSTOM BOX STYLE
@@ -243,7 +260,18 @@ function App() {
           element={<StyleSelectionPage />}
         />
 
+
+        {/* =================================================
+            HAPPY BABY
+        ================================================= */}
+
+        <Route
+          path="/happy-baby"
+          element={<HappyBaby />}
+        />
+
       </Routes>
+
     </HashRouter>
   );
 }

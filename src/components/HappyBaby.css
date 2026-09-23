@@ -1,0 +1,592 @@
+/* =========================================================
+   HAPPY BABY PAGE
+========================================================= */
+
+.happy-baby-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  direction: rtl;
+
+  background: #f8e8ee;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   GLOBAL BOX SIZING
+========================================================= */
+
+.happy-baby-page *,
+.happy-baby-page *::before,
+.happy-baby-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FIXED BACKGROUND IMAGE
+   تصویر دیگر با محتوا حرکت نمی‌کند
+========================================================= */
+.happy-baby-page-bg {
+  position: fixed;
+
+  top: 10;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+
+  background-size: 100% 100%;
+
+  background-position: center center;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SOFT LIGHT OVER IMAGE
+========================================================= */
+
+.happy-baby-page::before {
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 55%;
+  height: 100vh;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 248, 250, 0.80) 0%,
+      rgba(255, 248, 250, 0.62) 52%,
+      rgba(255, 248, 250, 0.12) 100%
+    );
+}
+
+
+/* =========================================================
+   TOP BACK BUTTON
+========================================================= */
+
+.happy-baby-top-back {
+  position: fixed;
+
+  top: 24px;
+  right: 30px;
+
+  z-index: 30;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 16px;
+
+  color: #75445f;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  border: 1px solid rgba(190, 116, 148, 0.25);
+
+  border-radius: 25px;
+
+  text-decoration: none;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  box-shadow:
+    0 4px 15px rgba(115, 70, 92, 0.10);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.happy-baby-top-back:hover {
+  color: #63384f;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 20px rgba(115, 70, 92, 0.15);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.happy-baby-page-content {
+  position: relative;
+
+  z-index: 10;
+
+  width: 45%;
+
+  max-width: 680px;
+
+  margin-left: 5.5%;
+
+  padding: 110px 20px 80px;
+
+  color: #4b4248;
+
+  text-align: right;
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+
+  backdrop-filter: none;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   TITLE LINE
+========================================================= */
+
+.happy-baby-page-line {
+  width: 105px;
+
+  height: 4px;
+
+  margin: 0 0 23px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #edabc4,
+      #d984aa
+    );
+
+  border-radius: 30px;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.happy-baby-page-text {
+  margin: 0 0 15px;
+
+  color: #4b4248;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  line-height: 2;
+
+  letter-spacing: 0;
+
+  text-align: justify;
+
+  text-shadow:
+    0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================================
+   STRONG TEXT
+========================================================= */
+
+.happy-baby-page-text strong {
+  color: #40363d;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FINAL QUOTE
+========================================================= */
+
+.happy-baby-page-quote {
+  display: inline-block;
+
+  margin: 5px 0 0;
+
+  padding: 9px 22px;
+
+  color: #814b69;
+
+  background: rgba(255, 221, 234, 0.84);
+
+  border: 1px solid rgba(221, 137, 168, 0.20);
+
+  border-radius: 30px;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.9;
+
+  text-align: right;
+
+  box-shadow:
+    0 5px 18px rgba(120, 70, 98, 0.08);
+}
+
+
+.happy-baby-page-quote strong {
+  color: #814b69;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .happy-baby-page-content {
+    width: 43%;
+
+    max-width: 700px;
+
+    margin-left: 6%;
+
+    padding-top: 120px;
+  }
+
+
+  .happy-baby-page-text {
+    font-size: 16px;
+
+    line-height: 2.05;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .happy-baby-page-content {
+    width: 49%;
+
+    max-width: 570px;
+
+    margin-left: 4%;
+
+    padding:
+      100px
+      12px
+      60px;
+  }
+
+
+  .happy-baby-page::before {
+    width: 61%;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255, 248, 250, 0.84) 0%,
+        rgba(255, 248, 250, 0.68) 60%,
+        rgba(255, 248, 250, 0.10) 100%
+      );
+  }
+
+
+  .happy-baby-page-text {
+    font-size: 15px;
+
+    line-height: 1.95;
+
+    margin-bottom: 13px;
+  }
+
+
+  .happy-baby-page-quote {
+    font-size: 14px;
+
+    padding: 8px 17px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .happy-baby-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    min-height: 100svh;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE BACKGROUND
+     مهم:
+     اینجا دوباره تعریف نمی‌کنیم.
+     همان fixed بالا استفاده می‌شود.
+  ------------------------------------------------------- */
+
+  .happy-baby-page-bg {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center center;
+
+    z-index: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     MOBILE OVERLAY
+  ------------------------------------------------------- */
+
+  .happy-baby-page::before {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 248, 250, 0.18) 0%,
+        rgba(255, 248, 250, 0.42) 45%,
+        rgba(255, 248, 250, 0.82) 100%
+      );
+  }
+
+
+  /* -------------------------------------------------------
+     BACK BUTTON
+  ------------------------------------------------------- */
+
+  .happy-baby-top-back {
+    position: fixed;
+
+    top: 18px;
+
+    right: 18px;
+
+    padding: 6px 13px;
+
+    font-size: 13px;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTENT
+  ------------------------------------------------------- */
+
+  .happy-baby-page-content {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    transform: none;
+
+    width: 100%;
+
+    max-width: none;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding:
+      80px
+      22px
+      40px;
+
+    z-index: 10;
+  }
+
+
+  /* -------------------------------------------------------
+     LINE
+  ------------------------------------------------------- */
+
+  .happy-baby-page-line {
+    width: 65px;
+
+    height: 3px;
+
+    margin: 10px 0 20px;
+  }
+
+
+  /* -------------------------------------------------------
+     TEXT
+  ------------------------------------------------------- */
+
+  .happy-baby-page-text {
+    margin-bottom: 15px;
+
+    color: #4b4248;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    text-align: right;
+  }
+
+
+  /* -------------------------------------------------------
+     QUOTE
+  ------------------------------------------------------- */
+
+  .happy-baby-page-quote {
+    display: block;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    padding: 9px 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .happy-baby-page-content {
+    padding:
+      72px
+      15px
+      30px;
+  }
+
+
+  .happy-baby-top-back {
+    top: 16px;
+
+    right: 15px;
+
+    font-size: 12px;
+  }
+
+
+  .happy-baby-page-text {
+    font-size: 14px;
+
+    line-height: 1.95;
+  }
+
+
+  .happy-baby-page-quote {
+    font-size: 12px;
+
+    padding: 8px 12px;
+  }
+}

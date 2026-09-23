@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Products.css";
+
 
 import lady1 from "../assets/happy-lady/happy-lady-1.jpg";
 import lady2 from "../assets/happy-lady/happy-lady-2.jpg";
@@ -7,17 +10,21 @@ import lady3 from "../assets/happy-lady/happy-lady-3.jpg";
 import lady4 from "../assets/happy-lady/happy-lady-4.jpg";
 import lady5 from "../assets/happy-lady/happy-lady-5.jpg";
 
+
 import baby1 from "../assets/happy-baby/happy-baby-1.jpg";
 import baby2 from "../assets/happy-baby/happy-baby-2.jpg";
 import baby3 from "../assets/happy-baby/happy-baby-3.jpg";
 import baby4 from "../assets/happy-baby/happy-baby-4.jpg";
 
+
 function Products() {
+
   const [ladyIndex, setLadyIndex] = useState(0);
   const [babyIndex, setBabyIndex] = useState(0);
 
+
   /* =========================================================
-     HAPPY LADY PRODUCTS
+      HAPPY LADY PRODUCTS
   ========================================================= */
 
   const ladyProducts = [
@@ -43,8 +50,9 @@ function Products() {
     },
   ];
 
+
   /* =========================================================
-     HAPPY BABY PRODUCTS
+      HAPPY BABY PRODUCTS
   ========================================================= */
 
   const babyProducts = [
@@ -66,39 +74,68 @@ function Products() {
     },
   ];
 
+
   /* =========================================================
-     HAPPY LADY AUTO SLIDER
+      HAPPY LADY AUTO SLIDER
   ========================================================= */
 
   useEffect(() => {
+
     const ladyTimer = setInterval(() => {
-      setLadyIndex((prev) => (prev + 1) % ladyProducts.length);
+
+      setLadyIndex(
+        (prev) => (prev + 1) % ladyProducts.length
+      );
+
     }, 3000);
 
+
     return () => clearInterval(ladyTimer);
+
   }, [ladyProducts.length]);
 
+
   /* =========================================================
-     HAPPY BABY AUTO SLIDER
+      HAPPY BABY AUTO SLIDER
   ========================================================= */
 
   useEffect(() => {
+
     const babyTimer = setInterval(() => {
-      setBabyIndex((prev) => (prev + 1) % babyProducts.length);
+
+      setBabyIndex(
+        (prev) => (prev + 1) % babyProducts.length
+      );
+
     }, 3500);
 
+
     return () => clearInterval(babyTimer);
+
   }, [babyProducts.length]);
 
+
   /* =========================================================
-     GET VISIBLE PRODUCTS
+      GET VISIBLE PRODUCTS
   ========================================================= */
 
-  const getVisibleProducts = (products, index, count) => {
-    return Array.from({ length: count }, (_, i) => {
-      return products[(index + i) % products.length];
-    });
+  const getVisibleProducts = (
+    products,
+    index,
+    count
+  ) => {
+
+    return Array.from(
+      { length: count },
+      (_, i) => {
+        return products[
+          (index + i) % products.length
+        ];
+      }
+    );
+
   };
+
 
   const visibleLady = getVisibleProducts(
     ladyProducts,
@@ -106,18 +143,22 @@ function Products() {
     3
   );
 
+
   const visibleBaby = getVisibleProducts(
     babyProducts,
     babyIndex,
     1
   );
 
+
   return (
+
     <section
       id="products"
       className="products-section"
       dir="rtl"
     >
+
 
       {/* =====================================================
           PRODUCTS TITLE / HEART MARQUEE
@@ -126,34 +167,47 @@ function Products() {
       <div className="products-heading">
 
         <div className="heart-marquee">
+
           <div className="heart-track">
 
-            {Array.from({ length: 18 }).map((_, index) => (
-              <span
-                className="solid-heart"
-                key={`heart-${index}`}
-              >
-                ♥
-              </span>
-            ))}
+            {Array.from({ length: 18 }).map(
+              (_, index) => (
 
-            {Array.from({ length: 18 }).map((_, index) => (
-              <span
-                className="solid-heart"
-                key={`duplicate-heart-${index}`}
-              >
-                ♥
-              </span>
-            ))}
+                <span
+                  className="solid-heart"
+                  key={`heart-${index}`}
+                >
+                  ♥
+                </span>
+
+              )
+            )}
+
+
+            {Array.from({ length: 18 }).map(
+              (_, index) => (
+
+                <span
+                  className="solid-heart"
+                  key={`duplicate-heart-${index}`}
+                >
+                  ♥
+                </span>
+
+              )
+            )}
 
           </div>
+
         </div>
+
 
         <span className="products-title-text">
           محصولات ما
         </span>
 
       </div>
+
 
       {/* =====================================================
           HAPPY LADY
@@ -162,6 +216,7 @@ function Products() {
       <div className="category-block lady-category">
 
         <div className="lady-content">
+
 
           <div className="category-title">
 
@@ -175,27 +230,34 @@ function Products() {
 
           </div>
 
+
           <div className="product-slider lady-slider">
 
-            {visibleLady.map((product, index) => (
-              <div
-                className="product-card"
-                key={`lady-${ladyIndex}-${index}`}
-              >
+            {visibleLady.map(
+              (product, index) => (
 
-                <img
-                  src={product.image}
-                  alt={`${product.title} ${index + 1}`}
-                />
+                <div
+                  className="product-card"
+                  key={`lady-${ladyIndex}-${index}`}
+                >
 
-              </div>
-            ))}
+                  <img
+                    src={product.image}
+                    alt={`${product.title} ${index + 1}`}
+                  />
+
+                </div>
+
+              )
+            )}
 
           </div>
+
 
         </div>
 
       </div>
+
 
       {/* =====================================================
           HAPPY BABY
@@ -205,7 +267,13 @@ function Products() {
 
         <div className="baby-overlay"></div>
 
+
         <div className="baby-content">
+
+
+          {/* =================================================
+              HAPPY BABY TITLE
+          ================================================= */}
 
           <div className="category-title">
 
@@ -219,34 +287,68 @@ function Products() {
 
           </div>
 
+
           {/* =================================================
               HAPPY BABY PRODUCT
           ================================================= */}
 
           <div className="baby-slider">
 
-            {visibleBaby.map((product, index) => (
-              <div
-                className="baby-product-card"
-                key={`baby-${babyIndex}-${index}`}
-              >
+            {visibleBaby.map(
+              (product, index) => (
 
-                <img
-                  src={product.image}
-                  alt={`${product.title} ${index + 1}`}
-                />
+                <div
+                  className="baby-product-card"
+                  key={`baby-${babyIndex}-${index}`}
+                >
 
-              </div>
-            ))}
+                  <img
+                    src={product.image}
+                    alt={`${product.title} ${index + 1}`}
+                  />
+
+
+                  {/* =========================================
+                      MORE INFORMATION
+                  ========================================= */}
+
+                  <Link
+                    to="/happy-baby"
+                    className="happy-baby-more"
+                    aria-label="بیشتر درباره Happy Baby"
+                    title="بیشتر بدانید"
+                  >
+
+                
+                      
+                    
+
+                    <span className="happy-baby-more-text">
+                     
+                     بیشتر بدانید 
+                     ←
+                    </span>
+
+                  </Link>
+
+
+                </div>
+
+              )
+            )}
 
           </div>
+
 
         </div>
 
       </div>
 
+
     </section>
+
   );
 }
+
 
 export default Products;

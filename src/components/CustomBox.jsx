@@ -89,8 +89,8 @@ function CustomBox() {
         className="custom-box-back"
         aria-label="بازگشت به صفحه اولین پریود"
       >
-        <FiArrowRight />
-        <span>بازگشت</span>
+        
+        <span>بازگشت → </span>
       </Link>
 
 

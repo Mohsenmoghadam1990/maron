@@ -6,6 +6,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+
   background: #e3e6e9;
 
   font-family:
@@ -68,6 +69,7 @@
 
 .heart-marquee {
   position: absolute;
+
   inset: 0;
 
   width: 100%;
@@ -110,6 +112,7 @@
 
 .solid-heart {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -144,6 +147,7 @@
 
 .solid-heart:nth-child(4n + 1) {
   color: #f1a6bd;
+
   font-size: 35px;
 
   filter:
@@ -157,6 +161,7 @@
 
 .solid-heart:nth-child(4n + 2) {
   color: #b99bd5;
+
   font-size: 31px;
 
   filter:
@@ -170,6 +175,7 @@
 
 .solid-heart:nth-child(4n + 3) {
   color: #78c7dc;
+
   font-size: 36px;
 
   filter:
@@ -183,6 +189,7 @@
 
 .solid-heart:nth-child(4n) {
   color: #efb095;
+
   font-size: 32px;
 
   filter:
@@ -279,9 +286,11 @@
 
 .products-title-text {
   position: relative;
+
   z-index: 5;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -297,6 +306,7 @@
     sans-serif;
 
   font-size: 24px;
+
   font-weight: 600;
 
   line-height: 1.7;
@@ -319,6 +329,7 @@
   position: relative;
 
   width: 100%;
+
   margin: 0;
 
   overflow: hidden;
@@ -333,7 +344,9 @@
   width: 100%;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
 
@@ -355,6 +368,7 @@
     sans-serif;
 
   font-size: 22px;
+
   font-weight: 500;
 
   line-height: 1.9;
@@ -370,6 +384,7 @@
   position: relative;
 
   margin: 0;
+
   padding: 0 0 10px;
 
   color: #3d2c45;
@@ -382,6 +397,7 @@
     sans-serif;
 
   font-size: 29px;
+
   font-weight: 650;
 
   line-height: 1.5;
@@ -399,9 +415,11 @@
   position: absolute;
 
   right: 50%;
+
   bottom: 0;
 
   width: 42px;
+
   height: 2px;
 
   transform: translateX(50%);
@@ -437,18 +455,23 @@
     url("../assets/LADY -1.jpg");
 
   background-size: cover;
+
   background-position: center;
+
   background-repeat: no-repeat;
 }
 
 .lady-content {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 }
 
@@ -463,6 +486,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   box-sizing: border-box;
@@ -496,6 +520,7 @@
   display: block;
 
   width: 100%;
+
   max-width: 100%;
 
   height: auto;
@@ -512,6 +537,7 @@
 
 .lady-slider {
   width: 100%;
+
   max-width: 1200px;
 
   gap: 22px;
@@ -608,9 +634,10 @@
 
   width: 100%;
 
-  height: 430px;
+  height: 480px;
 
   margin: 0;
+
   padding: 0;
 
   overflow: visible;
@@ -627,26 +654,28 @@
 
   top: 0;
 
-  /*
-    این مقدار فاصله از سمت راست را کنترل می‌کند.
-    0 = چسبیده به راست
-    50 = کمی داخل‌تر
-    100 = بیشتر داخل‌تر
-  */
-
   right: 50px;
 
   left: auto;
 
   width: 360px;
+
   max-width: 360px;
 
   margin: 0;
+
   padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 
   overflow: visible;
 
   border: 0;
+
   border-radius: 0;
 
   background: transparent;
@@ -663,6 +692,7 @@
   display: block;
 
   width: 100%;
+
   max-width: 100%;
 
   height: auto;
@@ -672,6 +702,7 @@
   object-fit: contain;
 
   margin: 0;
+
   padding: 0;
 
   border: 0;
@@ -679,9 +710,152 @@
 
 
 /* =========================================================
+   HAPPY BABY
+   MORE INFORMATION BUTTON
+   صورتی کم‌رنگ و بزرگ‌تر
+========================================================= */
+
+.happy-baby-more {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: row;
+
+  gap: 12px;
+
+  width: fit-content;
+
+  margin:
+    20px
+    auto
+    0;
+
+  padding:
+    13px
+    26px;
+
+  border-radius: 35px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f6c8d7,
+      #efaabd
+    );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+  direction: rtl;
+
+  box-shadow:
+    0 10px 25px
+    rgba(239, 170, 189, 0.28);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+
+  z-index: 20;
+}
+
+
+/* =========================================================
+   HAPPY BABY MORE INFORMATION
+   HEART ICON
+========================================================= */
+
+.happy-baby-more-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 32px;
+
+  height: 32px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.35);
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================================
+   HAPPY BABY MORE INFORMATION
+   TEXT
+========================================================= */
+
+.happy-baby-more-text {
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   HAPPY BABY HOVER
+========================================================= */
+
+.happy-baby-more:hover {
+  transform: translateY(-4px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #efaabd,
+      #e58fa9
+    );
+
+  box-shadow:
+    0 15px 32px
+    rgba(229, 143, 169, 0.35);
+}
+
+.happy-baby-more:hover
+.happy-baby-more-icon {
+  transform: translateX(-5px);
+
+  background:
+    rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
    TABLET
    601px - 900px
-   CENTER
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -748,7 +922,7 @@
   ======================================================= */
 
   .baby-category {
-    min-height: 560px;
+    min-height: 610px;
 
     padding:
       50px
@@ -759,11 +933,12 @@
   .baby-slider {
     width: 100%;
 
-    height: 390px;
+    height: 450px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
   }
 
@@ -773,15 +948,44 @@
     top: auto;
 
     right: auto;
+
     left: auto;
 
     width: min(380px, 70%);
 
     max-width: 380px;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
   }
 
   .baby-slider .baby-product-card img {
     max-height: 390px;
+  }
+
+  .happy-baby-more {
+    margin-top: 18px;
+
+    padding:
+      11px
+      23px;
+
+    font-size: 15px;
+
+    gap: 10px;
+  }
+
+  .happy-baby-more-icon {
+    width: 30px;
+
+    height: 30px;
+
+    font-size: 16px;
   }
 }
 
@@ -850,6 +1054,7 @@
 
   .category-title p {
     font-size: 18px;
+
     font-weight: 500;
   }
 
@@ -874,7 +1079,7 @@
   .baby-category {
     width: 100%;
 
-    min-height: 500px;
+    min-height: 550px;
 
     padding:
       40px
@@ -905,14 +1110,16 @@
   .baby-slider {
     width: 100%;
 
-    height: 340px;
+    height: 390px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     margin: 0;
+
     padding: 0;
   }
 
@@ -922,6 +1129,7 @@
     top: auto;
 
     right: auto;
+
     left: auto;
 
     width: 290px;
@@ -929,12 +1137,19 @@
     max-width: 290px;
 
     margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
   }
 
   .baby-slider .baby-product-card img {
     display: block;
 
     width: 100%;
+
     max-width: 100%;
 
     height: auto;
@@ -942,6 +1157,33 @@
     max-height: 340px;
 
     margin: 0;
+  }
+
+
+  /* =====================================================
+     MORE INFORMATION
+  ===================================================== */
+
+  .happy-baby-more {
+    margin-top: 16px;
+
+    padding:
+      10px
+      21px;
+
+    font-size: 14px;
+
+    gap: 9px;
+
+    border-radius: 32px;
+  }
+
+  .happy-baby-more-icon {
+    width: 29px;
+
+    height: 29px;
+
+    font-size: 15px;
   }
 }
 
@@ -999,7 +1241,7 @@
   ======================================================= */
 
   .baby-category {
-    min-height: 460px;
+    min-height: 520px;
 
     padding:
       35px
@@ -1008,7 +1250,7 @@
   }
 
   .baby-slider {
-    height: 315px;
+    height: 360px;
 
     justify-content: center;
   }
@@ -1025,10 +1267,42 @@
     top: auto;
 
     right: auto;
+
     left: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
   }
 
   .baby-slider .baby-product-card img {
     max-height: 315px;
+  }
+
+
+  /* =====================================================
+     MORE INFORMATION
+  ===================================================== */
+
+  .happy-baby-more {
+    margin-top: 14px;
+
+    padding:
+      9px
+      19px;
+
+    font-size: 13px;
+
+    gap: 8px;
+  }
+
+  .happy-baby-more-icon {
+    width: 27px;
+
+    height: 27px;
+
+    font-size: 14px;
   }
 }
