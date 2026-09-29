@@ -1,0 +1,980 @@
+
+/* =========================================================
+   PERIOD TRACKER PAGE
+========================================================= */
+
+.period-tracker-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px 55px;
+  direction: rtl;
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Tahoma,
+    Arial,
+    sans-serif;
+  overflow-x: hidden;
+  background-color: #f4eff9;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* =========================================================
+   FULL PAGE WHITE GLOW
+   هاله سفید روی کل عکس
+========================================================= */
+
+.period-tracker-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.78) 0%,
+      rgba(255, 255, 255, 0.66) 30%,
+      rgba(255, 255, 255, 0.52) 55%,
+      rgba(255, 255, 255, 0.38) 75%,
+      rgba(255, 255, 255, 0.28) 100%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================================
+   BACKGROUND LAYER
+========================================================= */
+
+.period-tracker-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: transparent;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.period-tracker-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   BACK BUTTON
+   همان استایل صفحه اولین پریود
+========================================================= */
+
+.period-back-button {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.70);
+
+  color: #5a3d64;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 15px rgba(90, 61, 100, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.period-back-button:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.90);
+}
+
+.period-back-button span:first-child {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.period-back-button span:last-child {
+  font-size: 15px;
+}
+
+/* =========================================================
+   MAIN TWO COLUMN LAYOUT
+========================================================= */
+
+.period-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: start;
+  width: 100%;
+}
+
+/* =========================================================
+   CALCULATOR COLUMN
+========================================================= */
+
+.period-calculator-column {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================================
+   CALCULATOR HEADING
+========================================================= */
+
+.period-heading {
+  width: 100%;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.period-heading-icon {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.period-heading h1 {
+  margin: 0;
+
+  color: #4d3156;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.period-heading h1 span {
+  color: #c45f91;
+}
+
+.period-heading-line {
+  width: 70px;
+  height: 3px;
+
+  margin: 10px auto 15px;
+
+  border-radius: 20px;
+  background: #c45f91;
+}
+
+.period-heading p {
+  margin: 4px 0;
+
+  color: #333333;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CALCULATOR
+   بدون کادر
+========================================================= */
+
+.period-calculator {
+  position: relative;
+
+  width: 100%;
+  max-width: 500px;
+
+  padding: 30px;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  backdrop-filter: none;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   REMOVE LOCAL CALCULATOR GLOW
+   هاله فقط روی کل صفحه است
+========================================================= */
+
+.period-calculator::before {
+  display: none;
+}
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.period-field {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 22px;
+
+  z-index: 2;
+}
+
+.period-field label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 9px;
+
+  color: #4d3156;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.field-icon {
+  font-size: 18px;
+}
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.period-input-wrapper {
+  width: 100%;
+}
+
+/* =========================================================
+   DATE INPUT + SELECT
+========================================================= */
+
+.period-input-wrapper input,
+.period-input-wrapper select {
+  width: 100%;
+  min-height: 48px;
+
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 14px;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  color: #333333;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 20px rgba(255, 255, 255, 0.35);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.period-input-wrapper input:hover,
+.period-input-wrapper select:hover {
+  background: rgba(255, 255, 255, 0.68);
+
+  box-shadow:
+    0 5px 25px rgba(255, 255, 255, 0.45);
+}
+
+.period-input-wrapper input:focus,
+.period-input-wrapper select:focus {
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  box-shadow:
+    0 0 25px rgba(255, 255, 255, 0.55);
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.period-input-wrapper select {
+  appearance: auto;
+  direction: rtl;
+}
+
+/* =========================================================
+   CALCULATE BUTTON
+========================================================= */
+
+.period-calculate-button {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 8px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: rgba(118, 85, 143, 0.90);
+
+  color: #ffffff;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 25px rgba(118, 85, 143, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.period-calculate-button:hover {
+  transform: translateY(-2px);
+
+  background: rgba(101, 71, 125, 0.94);
+
+  box-shadow:
+    0 10px 30px rgba(118, 85, 143, 0.25);
+}
+
+.period-calculate-button span:last-child {
+  font-size: 20px;
+}
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.period-result {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  margin-top: 22px;
+  padding: 20px;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 0 30px rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(2px);
+}
+
+.result-icon {
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.result-title {
+  margin: 0 0 7px;
+
+  color: #76558f;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.result-date {
+  color: #c45f91;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  direction: rtl;
+}
+
+.result-cycle {
+  margin: 7px 0 0;
+
+  color: #555555;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CYCLE INFORMATION
+   کاملاً بدون کادر
+========================================================= */
+
+.period-cycle-info {
+  width: 100%;
+
+  padding: 10px 5px;
+
+  direction: rtl;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow: none;
+
+  backdrop-filter: none;
+
+  align-self: stretch;
+}
+
+/* =========================================================
+   CYCLE HEADING
+========================================================= */
+
+.period-cycle-info-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 18px;
+}
+
+.period-cycle-info-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  font-size: 22px;
+
+  box-shadow: none;
+}
+
+.period-cycle-info-heading h2 {
+  margin: 0 0 4px;
+
+  color: #4d3156;
+
+  font-family:
+    "Calibri",
+    "Calibri Body",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.period-cycle-info-heading p {
+  margin: 0;
+
+  color: #765f80;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CYCLE INTRO
+========================================================= */
+
+.period-cycle-info-intro {
+  margin: 0 0 22px;
+
+  color: #222222;
+
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 2;
+
+  text-align: right;
+}
+
+.period-cycle-info-intro strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CYCLE STAGES
+========================================================= */
+
+.period-cycle-stages {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+/* =========================================================
+   CYCLE STAGE
+   بدون کادر
+========================================================= */
+
+.period-cycle-stage {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 5px 0;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow: none;
+
+  transition: transform 0.3s ease;
+}
+
+.period-cycle-stage:hover {
+  transform: translateY(-3px);
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+   CYCLE NUMBER
+========================================================= */
+
+.period-cycle-number {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(118, 85, 143, 0.88);
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CYCLE CONTENT
+========================================================= */
+
+.period-cycle-stage-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.period-cycle-stage-content h3 {
+  margin: 0 0 6px;
+
+  color: #4d3156;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.period-cycle-stage-content h3 span {
+  display: inline-block;
+
+  margin-right: 6px;
+
+  color: #c45f91;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.period-cycle-stage-content p {
+  margin: 0;
+
+  color: #222222;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   FOOTER MESSAGE
+========================================================= */
+
+.period-footer {
+  width: 100%;
+
+  margin-top: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  text-align: center;
+}
+
+.period-footer span {
+  font-size: 20px;
+}
+
+.period-footer p {
+  margin: 0;
+
+  color: #4d3156;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .period-main-grid {
+    gap: 35px;
+  }
+
+  .period-heading h1 {
+    font-size: 28px;
+  }
+
+  .period-cycle-info-heading h2 {
+    font-size: 21px;
+  }
+
+  .period-cycle-stages {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+  .period-tracker-page {
+    padding: 85px 18px 45px;
+
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+  .period-main-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .period-calculator-column {
+    width: 100%;
+  }
+
+  .period-calculator {
+    max-width: 650px;
+  }
+
+  .period-cycle-info {
+    width: 100%;
+  }
+
+  .period-footer {
+    margin-top: 35px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .period-tracker-page {
+    padding: 78px 14px 35px;
+
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+  /* BACK BUTTON */
+
+  .period-back-button {
+    top: 15px;
+    right: 15px;
+
+    padding: 8px 13px;
+
+    font-size: 13px;
+  }
+
+  .period-back-button span:first-child {
+    font-size: 16px;
+  }
+
+  .period-back-button span:last-child {
+    font-size: 13px;
+  }
+
+  /* HEADING */
+
+  .period-heading {
+    margin-bottom: 20px;
+  }
+
+  .period-heading-icon {
+    font-size: 27px;
+  }
+
+  .period-heading h1 {
+    font-size: 24px;
+  }
+
+  .period-heading p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* CALCULATOR */
+
+  .period-calculator {
+    padding: 22px 17px;
+  }
+
+  /* FIELD */
+
+  .period-field {
+    margin-bottom: 18px;
+  }
+
+  .period-field label {
+    font-size: 14px;
+  }
+
+  /* INPUT */
+
+  .period-input-wrapper input,
+  .period-input-wrapper select {
+    min-height: 46px;
+    font-size: 14px;
+  }
+
+  /* CALCULATE BUTTON */
+
+  .period-calculate-button {
+    min-height: 48px;
+    font-size: 14px;
+  }
+
+  /* RESULT */
+
+  .period-result {
+    padding: 17px;
+  }
+
+  .result-date {
+    font-size: 22px;
+  }
+
+  /* CYCLE INFO */
+
+  .period-cycle-info {
+    padding: 0;
+  }
+
+  .period-cycle-info-heading {
+    gap: 9px;
+    margin-bottom: 14px;
+  }
+
+  .period-cycle-info-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 19px;
+  }
+
+  .period-cycle-info-heading h2 {
+    font-size: 19px;
+  }
+
+  .period-cycle-info-heading p {
+    font-size: 12px;
+  }
+
+  .period-cycle-info-intro {
+    margin-bottom: 18px;
+
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  /* CYCLE STAGES */
+
+  .period-cycle-stages {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .period-cycle-stage {
+    gap: 10px;
+    padding: 3px 0;
+  }
+
+  .period-cycle-number {
+    width: 30px;
+    height: 30px;
+
+    font-size: 14px;
+  }
+
+  .period-cycle-stage-content h3 {
+    font-size: 15px;
+  }
+
+  .period-cycle-stage-content h3 span {
+    font-size: 11px;
+  }
+
+  .period-cycle-stage-content p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  /* FOOTER */
+
+  .period-footer {
+    margin-top: 30px;
+
+    align-items: flex-start;
+  }
+
+  .period-footer p {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .period-back-button {
+    top: 15px;
+    right: 12px;
+
+    padding: 7px 11px;
+
+    font-size: 13px;
+  }
+
+  .period-back-button span:first-child {
+    font-size: 17px;
+  }
+
+  .period-back-button span:last-child {
+    font-size: 13px;
+  }
+
+  .period-heading h1 {
+    font-size: 23px;
+  }
+
+  .period-calculator {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .period-cycle-info-heading h2 {
+    font-size: 18px;
+  }
+
+  .period-cycle-stage-content h3 {
+    font-size: 14px;
+  }
+
+  .period-cycle-stage-content p {
+    font-size: 12px;
+  }
+}
+

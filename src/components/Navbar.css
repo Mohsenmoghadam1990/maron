@@ -1,0 +1,665 @@
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: relative !important;
+
+  width: 100% !important;
+  min-height: 70px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+
+  direction: ltr !important;
+
+  background: transparent !important;
+
+  border: none !important;
+  box-shadow: none !important;
+
+  z-index: 1000 !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.navbar-brand {
+  position: relative !important;
+
+  order: 1 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  gap: 9px !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  direction: rtl !important;
+
+  flex-shrink: 0 !important;
+
+  z-index: 1001 !important;
+}
+
+
+/* =========================================================
+   MARON LOGO
+   لوگوی اصلی
+========================================================= */
+
+.navbar-logo {
+  position: relative !important;
+
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: auto !important;
+
+  margin: 0 !important;
+
+  padding: 7px 8px 14px !important;
+
+  color: #604568 !important;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size: 27px !important;
+
+  font-weight: 500 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: -0.7px !important;
+
+  white-space: nowrap !important;
+
+  direction: rtl !important;
+
+  text-decoration: none !important;
+
+  background: transparent !important;
+
+  border: none !important;
+
+  outline: none !important;
+
+  cursor: pointer !important;
+
+  transform: rotate(-1.5deg) !important;
+
+  text-shadow:
+    0 2px 8px rgba(96, 69, 104, 0.10) !important;
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    text-shadow 0.35s ease !important;
+}
+
+
+/* =========================================================
+   MARON TEXT
+========================================================= */
+
+.navbar-logo-main {
+  position: relative !important;
+
+  display: inline-block !important;
+
+  color: inherit !important;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size: inherit !important;
+
+  font-weight: 500 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: inherit !important;
+
+  white-space: nowrap !important;
+
+  transform:
+    skewX(-5deg)
+    rotate(0.5deg) !important;
+}
+
+
+/* =========================================================
+   DECORATIVE UNDERLINE
+   خط دست‌کشیده زیر مارون
+========================================================= */
+
+.navbar-logo-main::before {
+  content: "" !important;
+
+  position: absolute !important;
+
+  right: -4px !important;
+  left: -2px !important;
+
+  bottom: -8px !important;
+
+  height: 5px !important;
+
+  border-bottom:
+    2px solid rgba(190, 137, 177, 0.65) !important;
+
+  border-radius:
+    0 0 55% 45% !important;
+
+  transform:
+    rotate(-2deg)
+    skewX(-18deg) !important;
+
+  opacity: 0.85 !important;
+}
+
+
+/* =========================================================
+   SECONDARY SHORT STROKE
+========================================================= */
+
+.navbar-logo-main::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  width: 15px !important;
+  height: 5px !important;
+
+  left: 3px !important;
+
+  bottom: -11px !important;
+
+  border-bottom:
+    2px solid rgba(214, 155, 200, 0.75) !important;
+
+  border-radius: 50% !important;
+
+  transform:
+    rotate(7deg) !important;
+
+  opacity: 0.8 !important;
+}
+
+
+/* =========================================================
+   SMALL DECORATIVE DOT
+   نقطه ظریف کنار لوگو
+========================================================= */
+
+.navbar-logo::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  width: 6px !important;
+  height: 6px !important;
+
+  left: -1px !important;
+  top: 9px !important;
+
+  border-radius: 50% !important;
+
+  background:
+    #d39abd !important;
+
+  box-shadow:
+    0 0 0 3px rgba(211, 154, 189, 0.10) !important;
+
+  transform:
+    rotate(12deg) !important;
+
+  opacity: 0.85 !important;
+}
+
+
+/* =========================================================
+   LOGO HOVER
+========================================================= */
+
+.navbar-logo:hover {
+  color: #805b82 !important;
+
+  transform:
+    rotate(-2deg)
+    translateY(-2px) !important;
+
+  text-shadow:
+    0 5px 13px rgba(128, 91, 130, 0.15) !important;
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.navbar-music-button {
+  width: 42px !important;
+  height: 42px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  border:
+    1px solid rgba(118, 85, 132, 0.22) !important;
+
+  border-radius: 50% !important;
+
+  background:
+    rgba(255, 255, 255, 0.72) !important;
+
+  color: #765584 !important;
+
+  font-size: 21px !important;
+
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+
+  flex-shrink: 0 !important;
+
+  direction: ltr !important;
+
+  box-shadow:
+    0 4px 14px rgba(80, 55, 90, 0.08) !important;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease !important;
+}
+
+
+/* =========================================================
+   MUSIC ICON
+========================================================= */
+
+.navbar-music-button span {
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  line-height: 1 !important;
+
+  transform:
+    translateY(-1px) !important;
+}
+
+
+/* =========================================================
+   MUSIC HOVER
+========================================================= */
+
+.navbar-music-button:hover {
+  background:
+    rgba(255, 255, 255, 0.92) !important;
+
+  color: #684d7d !important;
+
+  transform:
+    translateY(-2px) !important;
+
+  box-shadow:
+    0 6px 18px rgba(80, 55, 90, 0.13) !important;
+}
+
+
+/* =========================================================
+   MUSIC PLAYING
+========================================================= */
+
+.navbar-music-button.playing {
+  color: #684d7d !important;
+
+  border-color:
+    rgba(104, 77, 125, 0.35) !important;
+
+  background:
+    rgba(255, 255, 255, 0.88) !important;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.navbar-menu {
+  position: relative !important;
+
+  order: 2 !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center !important;
+
+  justify-content: flex-end !important;
+
+  gap: 32px !important;
+
+  list-style: none !important;
+
+  direction: rtl !important;
+
+  flex-wrap: nowrap !important;
+
+  z-index: 1001 !important;
+
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+========================================================= */
+
+.navbar-menu li {
+  position: relative !important;
+
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  list-style: none !important;
+
+  flex-shrink: 0 !important;
+}
+
+
+/* =========================================================
+   MENU LINKS
+========================================================= */
+
+.navbar-menu li a {
+  display: block !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  margin: 0 !important;
+
+  padding: 8px 0 !important;
+
+  color: #3f3345 !important;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif !important;
+
+  font-size: 16px !important;
+
+  font-weight: 500 !important;
+
+  line-height: 1.7 !important;
+
+  letter-spacing: -0.15px !important;
+
+  text-decoration: none !important;
+
+  white-space: nowrap !important;
+
+  direction: rtl !important;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+
+/* =========================================================
+   MENU HOVER
+========================================================= */
+
+.navbar-menu li a:hover {
+  color: #765584 !important;
+
+  transform:
+    translateY(-1px) !important;
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+========================================================= */
+
+.top-navigation {
+  position: relative !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: flex-start !important;
+
+  justify-content: space-between !important;
+
+  direction: ltr !important;
+}
+
+
+/* =========================================================
+   NAVBAR INSIDE TOP NAVIGATION
+========================================================= */
+
+.top-navigation > .navbar {
+  position: relative !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: flex-start !important;
+
+  justify-content: space-between !important;
+
+  direction: ltr !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    min-height: 60px !important;
+
+    padding:
+      0 4px !important;
+  }
+
+  .navbar-brand {
+    gap: 7px !important;
+  }
+
+  .navbar-logo {
+    font-size: 21px !important;
+
+    padding:
+      5px 5px 11px !important;
+  }
+
+  .navbar-menu {
+    gap: 18px !important;
+  }
+
+  .navbar-menu li a {
+    font-size: 14px !important;
+  }
+
+  .navbar-music-button {
+    width: 38px !important;
+    height: 38px !important;
+
+    font-size: 19px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    min-height: 55px !important;
+
+    padding:
+      0 3px !important;
+  }
+
+  .navbar-brand {
+    gap: 5px !important;
+  }
+
+  .navbar-logo {
+    font-size: 18px !important;
+
+    padding:
+      4px 4px 10px !important;
+  }
+
+  .navbar-logo::after {
+    width: 5px !important;
+    height: 5px !important;
+
+    left: 0 !important;
+    top: 8px !important;
+  }
+
+  .navbar-menu {
+    gap: 12px !important;
+
+    max-width: 70% !important;
+
+    overflow-x: auto !important;
+
+    scrollbar-width: none !important;
+  }
+
+  .navbar-menu::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .navbar-menu li a {
+    font-size: 12px !important;
+
+    padding:
+      6px 0 !important;
+  }
+
+  .navbar-music-button {
+    width: 34px !important;
+    height: 34px !important;
+
+    font-size: 17px !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .navbar {
+    min-height: 52px !important;
+  }
+
+  .navbar-brand {
+    gap: 4px !important;
+  }
+
+  .navbar-menu {
+    gap: 9px !important;
+  }
+
+  .navbar-menu li a {
+    font-size: 11px !important;
+  }
+
+  .navbar-logo {
+    font-size: 16px !important;
+
+    font-weight: 500 !important;
+
+    letter-spacing: -0.4px !important;
+
+    padding:
+      4px 3px 9px !important;
+  }
+
+  .navbar-music-button {
+    width: 32px !important;
+    height: 32px !important;
+
+    font-size: 16px !important;
+  }
+}

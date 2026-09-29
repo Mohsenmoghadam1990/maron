@@ -1,0 +1,513 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section {
+  width: 100%;
+  margin: 0;
+  padding: 90px 8% 100px;
+
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(224, 184, 216, 0.45) 0%,
+      rgba(224, 184, 216, 0) 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(177, 203, 226, 0.42) 0%,
+      rgba(177, 203, 226, 0) 34%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0) 45%
+    ),
+    linear-gradient(
+      120deg,
+      #faf3f7 0%,
+      #f5edf6 35%,
+      #eef2f8 70%,
+      #f9f1f5 100%
+    );
+
+  direction: rtl;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
+.about-section *,
+.about-section *::before,
+.about-section *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.about-container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 65px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-image {
+  position: relative;
+
+  width: 47%;
+  max-width: 560px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 20px 50px rgba(104, 77, 125, 0.14);
+}
+
+
+/* =========================================================
+   IMAGE ELEMENT
+========================================================= */
+
+.about-image img {
+  display: block;
+
+  width: 100%;
+  height: 540px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 30px;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.about-image:hover img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.about-content {
+  flex: 1;
+
+  width: 100%;
+  max-width: 610px;
+
+  padding: 5px 0;
+
+  text-align: right;
+
+  color: #5e5057;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.about-small {
+  margin: 0 0 8px;
+
+  color: #c4879d;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.about-content h2 {
+  margin: 0 0 25px;
+
+  color: #765267;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 38px;
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   TITLE BRAND
+========================================================= */
+
+.about-content h2 span {
+  color: #9b6680;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.about-content > p:not(.about-small) {
+  width: 100%;
+  max-width: 570px;
+
+  margin: 0 0 19px;
+
+  color: #5e5057;
+
+  font-family:
+    "Vazirmatn",
+    "Estedad",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 2.15;
+
+  letter-spacing: 0;
+  word-spacing: 1px;
+
+  text-align: justify;
+  text-justify: inter-word;
+
+  direction: rtl;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BOLD TEXT
+========================================================= */
+
+.about-content strong {
+  color: #765267;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DECORATIVE LINE
+========================================================= */
+
+.about-line {
+  width: 85px;
+  height: 3px;
+
+  margin-top: 27px;
+  margin-right: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #e8a8bc,
+      #c995ad
+    );
+
+  border-radius: 20px;
+
+  transform: skewX(-18deg);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .about-section {
+    padding: 75px 5% 85px;
+  }
+
+  .about-container {
+    gap: 45px;
+  }
+
+  .about-image {
+    width: 45%;
+    max-width: 500px;
+  }
+
+  .about-image img {
+    height: 470px;
+  }
+
+  .about-content {
+    max-width: 560px;
+  }
+
+  .about-content h2 {
+    font-size: 34px;
+    margin-bottom: 21px;
+  }
+
+  .about-content > p:not(.about-small) {
+    max-width: 100%;
+
+    font-size: 15px;
+    line-height: 2.1;
+
+    margin-bottom: 16px;
+
+    text-align: justify;
+  }
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .about-container {
+    gap: 35px;
+  }
+
+  .about-image {
+    width: 44%;
+  }
+
+  .about-image img {
+    height: 430px;
+  }
+
+  .about-content h2 {
+    font-size: 31px;
+  }
+
+  .about-content > p:not(.about-small) {
+    font-size: 14.5px;
+    line-height: 2.05;
+
+    text-align: justify;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-section {
+    padding: 65px 22px 75px;
+  }
+
+  .about-container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 38px;
+  }
+
+
+  /* -------------------------------------------------------
+     IMAGE
+  ------------------------------------------------------- */
+
+  .about-image {
+    width: 100%;
+    max-width: 460px;
+
+    border-radius: 25px;
+
+    order: 1;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 390px;
+
+    border-radius: 25px;
+
+    object-position: center;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTENT
+  ------------------------------------------------------- */
+
+  .about-content {
+    width: 100%;
+    max-width: 600px;
+
+    order: 2;
+
+    padding: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     SMALL TITLE
+  ------------------------------------------------------- */
+
+  .about-small {
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    line-height: 2;
+  }
+
+
+  /* -------------------------------------------------------
+     MAIN TITLE
+  ------------------------------------------------------- */
+
+  .about-content h2 {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
+
+  /* -------------------------------------------------------
+     PARAGRAPHS
+  ------------------------------------------------------- */
+
+  .about-content > p:not(.about-small) {
+    width: 100%;
+    max-width: 100%;
+
+    margin-bottom: 16px;
+
+    font-size: 15px;
+    line-height: 2.1;
+
+    text-align: right;
+
+    word-spacing: 0;
+  }
+
+
+  /* -------------------------------------------------------
+     DECORATIVE LINE
+  ------------------------------------------------------- */
+
+  .about-line {
+    width: 70px;
+    height: 3px;
+
+    margin-top: 23px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .about-section {
+    padding: 55px 16px 65px;
+  }
+
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-image {
+    max-width: 100%;
+
+    border-radius: 21px;
+  }
+
+  .about-image img {
+    height: 320px;
+
+    border-radius: 21px;
+  }
+
+  .about-small {
+    font-size: 13px;
+  }
+
+  .about-content h2 {
+    font-size: 27px;
+
+    margin-bottom: 17px;
+  }
+
+  .about-content > p:not(.about-small) {
+    font-size: 14px;
+    line-height: 2.05;
+
+    margin-bottom: 14px;
+
+    text-align: right;
+  }
+
+  .about-line {
+    width: 60px;
+    height: 2px;
+  }
+}
